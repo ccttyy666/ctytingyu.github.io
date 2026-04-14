@@ -121,8 +121,8 @@
                 </div>
             </div>
 
-            <div class="md:col-span-3 bento-card flex flex-col md:flex-row p-0 min-h-[350px]">
-                <div class="w-full md:w-1/3 border-r border-gray-50 p-6 space-y-2 flex flex-col justify-center">
+           <div class="md:col-span-3 bento-card flex flex-col md:flex-row p-0 min-h-[450px]">
+                <div class="w-full md:w-1/3 border-r border-gray-50 p-6 space-y-2 flex flex-col justify-center bg-white/50">
                     <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Travel Footprints</h3>
                     <button onclick="switchCity('milan')" class="city-btn active-city w-full text-left px-4 py-3 rounded-xl transition-all font-medium text-sm">🇮🇹 米兰 (Milan)</button>
                     <button onclick="switchCity('zurich')" class="city-btn w-full text-left px-4 py-3 rounded-xl transition-all font-medium text-sm text-gray-400 hover:bg-gray-50">🇨🇭 苏黎世 (Zurich)</button>
@@ -130,29 +130,34 @@
                     <button onclick="switchCity('guangzhou')" class="city-btn w-full text-left px-4 py-3 rounded-xl transition-all font-medium text-sm text-gray-400 hover:bg-gray-50">🇨🇳 广州 (Guangzhou)</button>
                 </div>
             
-                <div id="city-stage" class="w-full md:w-2/3 p-8 flex flex-col justify-between bg-gradient-to-br from-white to-gray-50 transition-all duration-500">
-                    <div id="city-content" class="animate-in fade-in duration-700">
-                        <h4 id="city-name" class="text-3xl font-bold mb-2">米兰</h4>
-                        <p id="city-desc" class="text-gray-500 text-sm leading-relaxed">现在的居住地。在 Duomo 的光影下感受历史与现代设计的交织。</p>
+                <div id="city-stage" class="w-full md:w-2/3 p-8 flex flex-col justify-between bg-gradient-to-br from-blue-50 to-white transition-all duration-500">
+                    <div id="city-content" class="animate-in fade-in duration-700 flex-1 flex flex-col">
+                        <h4 id="city-name" class="text-3xl font-bold mb-2 text-gray-900">米兰</h4>
+                        <p id="city-desc" class="text-gray-500 text-sm leading-relaxed mb-6">现在的居住地。在 Duomo 的光影下感受历史与现代设计的交织。</p>
+                        
+                        <div class="flex-1 w-full relative overflow-hidden rounded-2xl shadow-sm border border-black/5 bg-gray-100">
+                            <img id="city-image" src="milan.jpg" alt="City View" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                        </div>
                     </div>
+                    
                     <div class="flex flex-wrap gap-2 mt-6">
-                        <span id="tag-1" class="px-3 py-1 bg-white border border-gray-100 rounded-full text-[10px] shadow-sm">设计之都</span>
-                        <span id="tag-2" class="px-3 py-1 bg-white border border-gray-100 rounded-full text-[10px] shadow-sm">意式生活</span>
+                        <span id="tag-1" class="px-3 py-1 bg-white border border-gray-100 rounded-full text-[10px] shadow-sm text-gray-600 font-medium">设计之都</span>
+                        <span id="tag-2" class="px-3 py-1 bg-white border border-gray-100 rounded-full text-[10px] shadow-sm text-gray-600 font-medium">意式生活</span>
                     </div>
                 </div>
             </div>
             
             <script>
+                // 在数据中加入了 img 字段，对应你即将上传的文件名
                 const cityData = {
-                    milan: { name: '米兰', desc: '现在的居住地。在 Duomo 的光影下感受历史与现代设计的交织。', tags: ['设计之都', '意式生活'], color: 'from-blue-50' },
-                    zurich: { name: '苏黎世', desc: '在苏黎世湖畔思考算法，感受瑞士极致的精准与自然的宁静。', tags: ['金融中心', '湖光山色'], color: 'from-gray-100' },
-                    paris: { name: '巴黎', desc: '漫步在塞纳河畔，寻找建筑美学与控制论之间的灵感碰撞。', tags: ['艺术殿堂', '浪漫建筑'], color: 'from-rose-50' },
-                    guangzhou: { name: '广州', desc: '我的家乡。烟火气与科技创新的融合，我机器人梦开始的地方。', tags: ['岭南文化', '美食之都'], color: 'from-orange-50' }
+                    milan: { name: '米兰', desc: '现在的居住地。在 Duomo 的光影下感受历史与现代设计的交织。', tags: ['设计之都', '意式生活'], color: 'from-blue-50', img: 'milan.jpg' },
+                    zurich: { name: '苏黎世', desc: '在苏黎世湖畔思考算法，感受瑞士极致的精准与自然的宁静。', tags: ['金融中心', '湖光山色'], color: 'from-gray-100', img: 'zurich.jpg' },
+                    paris: { name: '巴黎', desc: '漫步在塞纳河畔，寻找建筑美学与控制论之间的灵感碰撞。', tags: ['艺术殿堂', '浪漫建筑'], color: 'from-rose-50', img: 'paris.jpg' },
+                    guangzhou: { name: '广州', desc: '我的家乡。烟火气与科技创新的融合，我机器人梦开始的地方。', tags: ['岭南文化', '美食之都'], color: 'from-orange-50', img: 'guangzhou.jpg' }
                 };
             
                 function switchCity(key) {
                     const data = cityData[key];
-                    // 视觉切换动画
                     const stage = document.getElementById('city-stage');
                     const content = document.getElementById('city-content');
                     
@@ -164,13 +169,15 @@
                         document.getElementById('city-desc').innerText = data.desc;
                         document.getElementById('tag-1').innerText = data.tags[0];
                         document.getElementById('tag-2').innerText = data.tags[1];
+                        // 核心：动态替换图片路径
+                        document.getElementById('city-image').src = data.img;
+                        
                         stage.className = `w-full md:w-2/3 p-8 flex flex-col justify-between bg-gradient-to-br ${data.color} to-white transition-all duration-500`;
                         
                         content.style.opacity = '1';
                         content.style.transform = 'translateY(0)';
                     }, 200);
             
-                    // 更新按钮样式
                     document.querySelectorAll('.city-btn').forEach(btn => {
                         btn.classList.remove('bg-gray-900', 'text-white', 'active-city');
                         btn.classList.add('text-gray-400');
@@ -179,7 +186,7 @@
                     activeBtn.classList.remove('text-gray-400');
                     activeBtn.classList.add('bg-gray-900', 'text-white', 'active-city');
                 }
-                // 初始化第一个按钮
+                // 初始化
                 document.querySelector('.city-btn').classList.add('bg-gray-900', 'text-white');
             </script>
 
