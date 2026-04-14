@@ -23,10 +23,14 @@
             background: #FFFFFF;
             border-radius: 20px;
             box-shadow: 0 2px 12px rgba(0,0,0,0.03);
-            transition: box-shadow 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0,0,0,0.02);
+            text-decoration: none; /* 去除链接下划线 */
+            display: block; /* 让整个 a 标签变成块级元素，占满整行 */
         }
         .pub-card:hover {
-            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            transform: translateY(-2px); /* 悬停时轻微上浮 */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
         }
     </style>
 </head>
@@ -47,41 +51,50 @@
 
         <div class="space-y-6">
             
-            <div class="pub-card p-8">
-                <div class="flex items-center space-x-3 mb-3">
-                    <span class="bg-blue-100 text-blue-700 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Journal Paper</span>
-                    <span class="text-sm text-gray-400">Published</span>
+            <a href="https://doi.org/10.1002/cta.4096" target="_blank" class="pub-card p-8 group">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center space-x-3">
+                        <span class="bg-blue-100 text-blue-700 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Journal Paper</span>
+                        <span class="text-sm text-gray-400">In Process</span>
+                    </div>
+                    <svg class="w-5 h-5 text-gray-300 opacity-0 group-hover:opacity-100 group-hover:text-blue-500 transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                 </div>
-                <h2 class="text-xl font-bold mb-2 text-gray-900">A Stacking Machine-Learning Based Method for Accelerating Magnetic Coupler Design with Ferrite Cores</h2>
+                <h2 class="text-xl font-bold mb-2 text-gray-900 group-hover:text-blue-600 transition-colors">A Stacking Machine-Learning Based Method for Accelerating Magnetic Coupler Design with Ferrite Cores</h2>
                 <p class="text-sm text-gray-600 mb-4 leading-relaxed">
                     Ding, W., Wang, Y., <span class="font-bold text-gray-900">Chen, T.</span>, Lu, Z., You, Y., & Huang, Z.
                 </p>
                 <p class="text-sm text-gray-500 italic">Wiley: The International Journal of Circuit Theory and Applications</p>
-            </div>
+            </a>
 
-            <div class="pub-card p-8">
-                <div class="flex items-center space-x-3 mb-3">
-                    <span class="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Conference Paper</span>
-                    <span class="text-sm text-gray-400">Published</span>
+            <a href="https://doi.org/10.1016/j.ifacol.2025.11.274" target="_blank" class="pub-card p-8 group">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center space-x-3">
+                        <span class="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Conference Paper</span>
+                        <span class="text-sm text-gray-400">Accepted</span>
+                    </div>
+                    <svg class="w-5 h-5 text-gray-300 opacity-0 group-hover:opacity-100 group-hover:text-blue-500 transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                 </div>
-                <h2 class="text-xl font-bold mb-2 text-gray-900">MRAC-based quantized spacecraft attitude takeover control</h2>
+                <h2 class="text-xl font-bold mb-2 text-gray-900 group-hover:text-blue-600 transition-colors">MRAC-based quantized spacecraft attitude takeover control</h2>
                 <p class="text-sm text-gray-600 mb-4 leading-relaxed">
                     <span class="font-bold text-gray-900">Chen, T.</span>, Xie, H., Chen, P.
                 </p>
                 <p class="text-sm text-gray-500 italic">IFAC ACA2025</p>
-            </div>
+            </a>
 
-            <div class="pub-card p-8">
-                <div class="flex items-center space-x-3 mb-3">
-                    <span class="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Conference Paper</span>
-                    <span class="text-sm text-gray-400">Published</span>
+            <a href="https://ieeexplore.ieee.org/document/10558175" target="_blank" class="pub-card p-8 group">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center space-x-3">
+                        <span class="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Conference Paper</span>
+                        <span class="text-sm text-gray-400">Published</span>
+                    </div>
+                    <svg class="w-5 h-5 text-gray-300 opacity-0 group-hover:opacity-100 group-hover:text-blue-500 transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                 </div>
-                <h2 class="text-xl font-bold mb-2 text-gray-900">Machine Learning Based Design of Magnetic Coupler for Wireless Power Transfer</h2>
+                <h2 class="text-xl font-bold mb-2 text-gray-900 group-hover:text-blue-600 transition-colors">Machine Learning Based Design of Magnetic Coupler for Wireless Power Transfer</h2>
                 <p class="text-sm text-gray-600 mb-4 leading-relaxed">
                     Ding, W., Wang, Y., <span class="font-bold text-gray-900">Chen, T.</span>, Luo, M., Liang, Y., Lei, J., & Huang, Z.
                 </p>
                 <p class="text-sm text-gray-500 italic">IEEE ISCAS 2024</p>
-            </div>
+            </a>
 
         </div>
     </main>
