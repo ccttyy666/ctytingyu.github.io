@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | Tingyu CHEN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #FBFBFD; /* Apple 经典的极致浅灰背景 */
+            color: #1D1D1F;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-nav {
+            background: rgba(251, 251, 253, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .pub-card {
+            background: #FFFFFF;
+            border-radius: 20px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+            transition: box-shadow 0.3s ease;
+        }
+        .pub-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="glass-nav fixed top-0 w-full z-50">
+        <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center text-gray-500 hover:text-gray-900 transition-colors">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                返回首页
+            </a>
+            <span class="text-sm font-semibold tracking-widest uppercase text-gray-400">Publications</span>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 pt-32 pb-20">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-12">科研成果与发表</h1>
+
+        <div class="space-y-6">
+            
+            <div class="pub-card p-8">
+                <div class="flex items-center space-x-3 mb-3">
+                    <span class="bg-blue-100 text-blue-700 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Journal Paper</span>
+                    <span class="text-sm text-gray-400">In Process</span>
+                </div>
+                <h2 class="text-xl font-bold mb-2 text-gray-900">A Stacking Machine-Learning Based Method for Accelerating Magnetic Coupler Design with Ferrite Cores</h2>
+                <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                    Ding, W., Wang, Y., <span class="font-bold text-gray-900">Chen, T.</span>, Lu, Z., You, Y., & Huang, Z.
+                </p>
+                <p class="text-sm text-gray-500 italic">Wiley: The International Journal of Circuit Theory and Applications</p>
+            </div>
+
+            <div class="pub-card p-8">
+                <div class="flex items-center space-x-3 mb-3">
+                    <span class="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Conference Paper</span>
+                    <span class="text-sm text-gray-400">Accepted</span>
+                </div>
+                <h2 class="text-xl font-bold mb-2 text-gray-900">MRAC-based quantized spacecraft attitude takeover control</h2>
+                <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                    <span class="font-bold text-gray-900">Chen, T.</span>, Xie, H., Chen, P.
+                </p>
+                <p class="text-sm text-gray-500 italic">IFAC ACA2025</p>
+            </div>
+
+            <div class="pub-card p-8">
+                <div class="flex items-center space-x-3 mb-3">
+                    <span class="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Conference Paper</span>
+                    <span class="text-sm text-gray-400">Published</span>
+                </div>
+                <h2 class="text-xl font-bold mb-2 text-gray-900">Machine Learning Based Design of Magnetic Coupler for Wireless Power Transfer</h2>
+                <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                    Ding, W., Wang, Y., <span class="font-bold text-gray-900">Chen, T.</span>, Luo, M., Liang, Y., Lei, J., & Huang, Z.
+                </p>
+                <p class="text-sm text-gray-500 italic">IEEE ISCAS 2024</p>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
