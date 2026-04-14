@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tingyu CHEN | 个人主页</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #FFFFFF;
+            color: #1D1D1F;
+            -webkit-font-smoothing: antialiased;
+        }
+        .bento-card {
+            background: #FFFFFF;
+            border-radius: 24px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+        .bento-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body class="selection:bg-blue-100">
+
+    <nav class="glass-nav fixed top-0 w-full z-50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <span class="text-xl font-bold tracking-tight">Tingyu.</span>
+            <div class="space-x-8 text-sm font-medium opacity-80">
+                <a href="#about" class="hover:text-blue-600 transition-colors">关于</a>
+                <a href="#research" class="hover:text-blue-600 transition-colors">科研</a>
+                <a href="#projects" class="hover:text-blue-600 transition-colors">项目</a>
+                <a href="mailto:ctytingyu2001@outlook.com" class="bg-[#0071E3] text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-all">联系我</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 pt-32 pb-20">
+        <section id="about" class="mb-20 text-center md:text-left">
+            <h2 class="text-sm font-semibold tracking-widest uppercase text-blue-600 mb-4">Hello, I'm Tingyu</h2>
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-tight">
+                专注自动化控制<br>& 机器学习研究
+            </h1>
+            <p class="text-xl text-gray-500 max-w-2xl leading-relaxed">
+                目前就读于米兰理工大学。致力于通过数据驱动的方法解决机器人与无线电能传输中的核心算法挑战。
+            </p>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            
+            <div class="md:col-span-2 bento-card p-8 flex flex-col justify-between h-80">
+                <div>
+                    <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Education</h3>
+                    <div class="mb-6">
+                        <p class="font-bold text-xl">Politecnico di Milano</p>
+                        <p class="text-gray-500 text-sm">自动化与控制硕士 (机器学习方向)</p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-xl text-gray-800">华南理工大学</p>
+                        <p class="text-gray-500 text-sm">机器人工程学士 · 专业排名前 15%</p>
+                    </div>
+                </div>
+                <div class="flex justify-end">
+                    <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-blue-600">
+                        🎓
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 bento-card p-8 bg-gradient-to-br from-blue-50 to-white">
+                <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Latest Research</h3>
+                <p class="text-2xl font-bold mb-4">基于堆叠机器学习的磁耦合器设计优化</p>
+                <p class="text-gray-500 mb-6 italic">已发表于 IEEE ISCAS 2024</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-white rounded-full text-xs shadow-sm">Machine Learning</span>
+                    <span class="px-3 py-1 bg-white rounded-full text-xs shadow-sm">WPT</span>
+                    <span class="px-3 py-1 bg-white rounded-full text-xs shadow-sm">Ansys Maxwell</span>
+                </div>
+            </div>
+
+            <div class="md:col-span-1 bento-card p-6 h-64 flex flex-col justify-center text-center">
+                <span class="text-4xl mb-4">🤖</span>
+                <p class="font-bold">移动机器人<br>轨迹规划</p>
+                <p class="text-xs text-gray-400 mt-2">DWA + GRRT 算法实现</p>
+            </div>
+
+            <div class="md:col-span-1 bento-card p-6 h-64 flex flex-col justify-center">
+                <h3 class="text-xs font-bold text-gray-400 uppercase text-center mb-4">Tech Stack</h3>
+                <div class="grid grid-cols-2 gap-2 text-xs font-medium">
+                    <div class="bg-gray-50 p-2 rounded-lg text-center">Python</div>
+                    <div class="bg-gray-50 p-2 rounded-lg text-center">Matlab</div>
+                    <div class="bg-gray-50 p-2 rounded-lg text-center">PyTorch</div>
+                    <div class="bg-gray-50 p-2 rounded-lg text-center">C++</div>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 bento-card p-8">
+                <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Awards</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-center space-x-3">
+                        <span class="text-blue-500 text-lg">●</span>
+                        <span class="font-medium text-gray-700">美国大学生数学建模竞赛 (MCM) 一等奖</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <span class="text-blue-500 text-lg">●</span>
+                        <span class="font-medium text-gray-700">亚太地区数学建模竞赛 (APMCM) 二等奖</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-10 text-gray-400 text-sm">
+        &copy; 2024 Tingyu CHEN. Designed with Apple Design Principles.
+    </footer>
+
+</body>
+</html>
