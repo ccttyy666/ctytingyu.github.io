@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Stack | Tingyu CHEN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #F5F5F7;
+            color: #1D1D1F;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-nav {
+            background: rgba(245, 245, 247, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .skill-card {
+            background: #FFFFFF;
+            border-radius: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+        .skill-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0071E3, #32D74B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="glass-nav fixed top-0 w-full z-50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center text-gray-500 hover:text-black transition-colors font-medium text-sm">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                返回主页
+            </a>
+            <span class="text-[12px] font-bold tracking-widest uppercase text-gray-400">Tech Stack</span>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 pt-32 pb-20">
+        <header class="mb-20 text-center">
+            <h2 class="text-sm font-bold tracking-widest uppercase text-gray-400 mb-4">My Arsenal</h2>
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6">梦想成为<br><span class="gradient-text">全栈机器人工程师</span></h1>
+            <p class="text-xl text-gray-500 max-w-2xl mx-auto">从底层硬件仿真、控制算法推导，到高层机器学习与强化学习的实现，打通机器人工程的完整技术链路。</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div class="skill-card p-8">
+                <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 mb-6 text-xl">
+                    💻
+                </div>
+                <h3 class="text-lg font-bold mb-6">Programming</h3>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-sm mb-1 font-medium"><span class="text-gray-700">Python</span><span class="text-blue-600">Advanced</span></div>
+                        <div class="w-full bg-gray-100 rounded-full h-1.5"><div class="bg-blue-500 h-1.5 rounded-full w-[90%]"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1 font-medium"><span class="text-gray-700">Matlab</span><span class="text-blue-600">Advanced</span></div>
+                        <div class="w-full bg-gray-100 rounded-full h-1.5"><div class="bg-blue-500 h-1.5 rounded-full w-[85%]"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1 font-medium"><span class="text-gray-700">C++</span><span class="text-blue-400">Intermediate</span></div>
+                        <div class="w-full bg-gray-100 rounded-full h-1.5"><div class="bg-blue-400 h-1.5 rounded-full w-[70%]"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card p-8">
+                <div class="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center text-purple-600 mb-6 text-xl">
+                    🧠
+                </div>
+                <h3 class="text-lg font-bold mb-6">Machine Learning</h3>
+                <p class="text-sm text-gray-500 mb-6 leading-relaxed">主攻强化学习在医疗机器人中的应用，具备扎实的数据挖掘与模型构建能力。</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">PyTorch</span>
+                    <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">Reinforcement Learning</span>
+                    <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">LSTM</span>
+                    <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">GA-SVR</span>
+                    <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">Fuzzy Clustering</span>
+                </div>
+            </div>
+
+            <div class="skill-card p-8">
+                <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-600 mb-6 text-xl">
+                    ⚙️
+                </div>
+                <h3 class="text-lg font-bold mb-6">Simulation & Control</h3>
+                <p class="text-sm text-gray-500 mb-6 leading-relaxed">擅长利用工业级软件进行物理场建模，并设计复杂的底层控制算法。</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">Ansys Maxwell</span>
+                    <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">Solidworks</span>
+                    <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">Simulink</span>
+                    <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">ADRC / PID</span>
+                    <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">DWA / GRRT</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
