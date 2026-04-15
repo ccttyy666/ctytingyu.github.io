@@ -36,6 +36,14 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        /* 自定义外部链接样式 */
+        .media-link {
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .media-link:hover .icon-box {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
@@ -47,15 +55,15 @@
                 返回 About Me
             </a>
             <div class="flex items-center space-x-6 text-[12px] font-bold tracking-widest uppercase">
-                <a href="../index.html" class="text-gray-400 hover:text-blue-600">Home</a>
-                <a href="../publications.html" class="text-gray-400 hover:text-blue-600">Research</a>
+                <a href="../index.html" class="text-gray-400 hover:text-blue-600 transition-colors">Home</a>
+                <a href="../publications.html" class="text-gray-400 hover:text-blue-600 transition-colors">Research</a>
             </div>
         </div>
     </nav>
 
     <main class="max-w-5xl mx-auto px-6 pt-32 pb-24">
         <header class="mb-20 text-center">
-            <h2 class="text-sm font-bold tracking-widest uppercase text-indigo-500 mb-4">Beyond The Lab</h2>
+            <h2 class="text-sm font-bold tracking-widest uppercase text-indigo-500 mb-4 tracking-widest">Beyond The Lab</h2>
             <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-6">跨越边界的<span class="gradient-text">社会影响力</span></h1>
             <p class="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed italic">
                 “梦想成为全栈机器人工程师，不仅是技术上的精进，更是社会价值的实现。”
@@ -68,79 +76,80 @@
                 <div class="md:w-3/5">
                     <div class="inline-block px-3 py-1 rounded-full bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 text-[10px] font-bold uppercase tracking-widest mb-6">Professional Roles</div>
                     <h3 class="text-3xl font-bold mb-6">社会兼职与学术贡献</h3>
-                    <div class="space-y-6">
+                    <div class="space-y-6 text-sm">
                         <div class="border-l-2 border-indigo-500 pl-6">
-                            <h4 class="text-xl font-bold text-white">联合创始人 (Co-Founder)</h4>
-                            <p class="text-indigo-200 text-sm mb-2 italic">Solarsail Super Computer</p>
-                            <p class="text-gray-400 text-sm leading-relaxed">致力于高性能计算（HPC）服务的商业化落地，参与构建从算力输出到科研算法支持的完整服务链条。</p>
+                            <h4 class="text-xl font-bold text-white mb-2">联合创始人 (Co-Founder)</h4>
+                            <p class="text-gray-400 leading-relaxed">Solarsail Super Computer: 致力于高性能计算（HPC）服务的商业化落地，推动前沿算法的实际应用。</p>
                         </div>
                         <div class="border-l-2 border-indigo-500 pl-6">
-                            <h4 class="text-xl font-bold text-white">期刊审稿人 (Academic Reviewer)</h4>
-                            <p class="text-indigo-200 text-sm mb-2 italic">FSS Journal</p>
-                            <p class="text-gray-400 text-sm leading-relaxed">受邀担任学术期刊审稿人，参与模糊系统及相关领域论文的同行评议，严格把控科研成果的学术质量。</p>
+                            <h4 class="text-xl font-bold text-white mb-2">期刊审稿人 (Academic Reviewer)</h4>
+                            <p class="text-gray-400 leading-relaxed">FSS Journal: 参与模糊系统及相关领域论文的同行评议，把控前沿学术成果质量。</p>
                         </div>
                     </div>
                 </div>
                 <div class="md:w-2/5 w-full aspect-square rounded-3xl bg-gradient-to-br from-indigo-500/10 to-purple-600/10 border border-white/5 flex items-center justify-center p-8 text-center">
-                    <p class="text-white/20 font-black text-4xl uppercase leading-tight tracking-tighter italic">Leadership & Expertise</p>
+                    <p class="text-white/20 font-black text-4xl uppercase leading-tight tracking-tighter italic">Expertise & Leadership</p>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
                 <div class="activity-card p-8 md:p-10">
                     <div class="w-12 h-12 rounded-2xl bg-pink-50 text-pink-500 flex items-center justify-center text-2xl mb-6">🎥</div>
                     <h3 class="text-2xl font-bold mb-4">自媒体与知识赋能</h3>
-                    <p class="text-gray-500 text-sm mb-8">理智与浪漫并存，在数字世界分享跨界思考。</p>
-                    <div class="space-y-6">
-                        <div class="flex gap-4">
-                            <div class="font-black text-blue-500 text-2xl">B</div>
-                            <div>
-                                <h4 class="font-bold text-gray-800">Bilibili 知识区 UP主</h4>
-                                <p class="text-xs text-gray-500 mt-1 leading-relaxed">
-                                    专注于<span class="font-semibold text-gray-700">全国大学生数学竞赛（CMC）</span>等高阶赛事的教学指导。通过硬核且通俗的公式推演与逻辑解构，帮助数万名理工科学子建立系统化的底层数学思维。
+                    <p class="text-gray-500 text-sm mb-8 leading-relaxed">通过数字内容连接世界，分享硬核技术与人文思考。</p>
+                    
+                    <div class="space-y-8">
+                        <a href="https://space.bilibili.com/393734000" target="_blank" class="media-link group flex gap-4 items-start">
+                            <div class="icon-box w-10 h-10 shrink-0 bg-blue-50 text-blue-500 font-black flex items-center justify-center rounded-xl text-xl transition-transform">B</div>
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between">
+                                    <h4 class="font-bold text-gray-800 group-hover:text-[#FB7299] transition-colors">Bilibili 知识区 UP主</h4>
+                                    <svg class="w-4 h-4 text-gray-300 group-hover:text-[#FB7299] transform group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7"></path></svg>
+                                </div>
+                                <p class="text-[12px] text-gray-500 mt-1 leading-relaxed">
+                                    专注于<span class="font-bold text-gray-700">全国大学生数学竞赛（CMC）</span>教学。通过逻辑解构，帮助学子建立系统化的数学思维。
                                 </p>
                             </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="font-black text-green-500 text-2xl">W</div>
-                            <div>
-                                <h4 class="font-bold text-gray-800">公众号主理人 & 专栏主笔</h4>
-                                <p class="text-xs text-gray-500 mt-1 leading-relaxed">
-                                    深耕图文创作，目前主导<span class="font-semibold text-gray-700">意大利语教学</span>与意式文化科普内容，助力留学生打破语言壁垒。同时具备扎实的文案功底，曾主笔书院“峻行封开”系列推文，产出多篇高阅读量的传播爆款。
+                        </a>
+
+                        <a href="https://mp.weixin.qq.com/s/JkAl5dZUgsxXuHeQV-UDtA" target="_blank" class="media-link group flex gap-4 items-start">
+                            <div class="icon-box w-10 h-10 shrink-0 bg-green-50 text-green-500 font-black flex items-center justify-center rounded-xl text-xl transition-transform">W</div>
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between">
+                                    <h4 class="font-bold text-gray-800 group-hover:text-[#07C160] transition-colors">公众号主理人</h4>
+                                    <svg class="w-4 h-4 text-gray-300 group-hover:text-[#07C160] transform group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7"></path></svg>
+                                </div>
+                                <p class="text-[12px] text-gray-500 mt-1 leading-relaxed">
+                                    主导<span class="font-bold text-gray-700">意大利语教学</span>与文化科普。同时作为“峻行封开”系列主笔，产出多篇爆款文章。
                                 </p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
                 <div class="activity-card p-8 md:p-10 bg-gradient-to-br from-blue-50 to-white">
                     <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl mb-6">🤝</div>
                     <h3 class="text-2xl font-bold mb-4">志愿服务与社会实践</h3>
-                    <p class="text-gray-500 text-sm mb-6">用行动回馈社会，累计服务时长 <span class="font-bold text-blue-600">100+ 小时</span>。</p>
+                    <p class="text-gray-500 text-sm mb-6 font-medium">累计 <span class="text-blue-600">100+ 小时</span> 服务时长</p>
                     <div class="space-y-6">
-                        <div>
-                            <h4 class="font-bold text-gray-800 flex items-center gap-2">
-                                <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-                                “大手牵小手”长期支教
-                            </h4>
-                            <p class="text-xs text-gray-500 mt-2 leading-relaxed">每周坚持线上授课 2 小时。通过学业辅导与心理激励，帮助受助儿童以全班第一的优异成绩升入当地顶尖初中。</p>
+                        <div class="border-l-2 border-blue-200 pl-4">
+                            <h4 class="font-bold text-gray-800 text-sm mb-1">“大手牵小手”支教项目</h4>
+                            <p class="text-[11px] text-gray-500 leading-relaxed">长期每周授课，帮助受助学生以优异成绩考入当地顶尖初中。</p>
                         </div>
-                        <div>
-                            <h4 class="font-bold text-gray-800 flex items-center gap-2">
-                                <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-                                封开县“三下乡”社会实践
-                            </h4>
-                            <p class="text-xs text-gray-500 mt-2 leading-relaxed">深入基层调研 7 天，负责团队宣传统筹。通过深度采访与采风，用文字赋能乡村文化传播。</p>
+                        <div class="border-l-2 border-blue-200 pl-4">
+                            <h4 class="font-bold text-gray-800 text-sm mb-1">封开县“三下乡”实践</h4>
+                            <p class="text-[11px] text-gray-500 leading-relaxed">深入基层调研，负责宣传统筹，用文字力量赋能乡村振兴。</p>
                         </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     </main>
 
     <footer class="text-center py-12 text-gray-300 text-[10px] uppercase tracking-widest">
-        &copy; 2024-2026 Tingyu CHEN. Driven by tech, inspired by people.
+        &copy; 2024-2026 Tingyu CHEN. Living with Purpose.
     </footer>
 
 </body>
