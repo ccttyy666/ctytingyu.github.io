@@ -12,6 +12,12 @@
         .nav-btn.active { background-color: #1D1D1F; color: #FFFFFF; }
         .gallery-img { transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1); }
         .gallery-img:hover { transform: scale(1.03); }
+        
+        /* 优雅的自定义滚动条 */
+        .custom-scroll::-webkit-scrollbar { width: 4px; }
+        .custom-scroll::-webkit-scrollbar-track { background: transparent; }
+        .custom-scroll::-webkit-scrollbar-thumb { background-color: rgba(0,0,0,0.05); border-radius: 10px; }
+        .custom-scroll:hover::-webkit-scrollbar-thumb { background-color: rgba(0,0,0,0.2); }
     </style>
 </head>
 <body>
@@ -30,13 +36,24 @@
     </nav>
 
     <main class="max-w-7xl mx-auto px-6 pt-24 pb-20 flex flex-col md:flex-row gap-12">
+        
         <aside class="w-full md:w-1/4 md:sticky md:top-24 h-fit">
             <h1 class="text-3xl font-bold tracking-tight mb-2">光影与足迹</h1>
-            <p class="text-sm text-gray-500 mb-8 italic">世界的维度，由脚步和镜头共同丈量。</p>
-            <div class="flex flex-col gap-2">
-                <button onclick="loadCity('milan')" class="nav-btn active w-full text-left px-5 py-3.5 rounded-2xl transition-all font-semibold text-gray-600 hover:bg-gray-100">🇮🇹 米兰 (Milan)</button>
-                <button onclick="loadCity('zurich')" class="nav-btn w-full text-left px-5 py-3.5 rounded-2xl transition-all font-semibold text-gray-600 hover:bg-gray-100">🇨🇭 苏黎世 (Zurich)</button>
-                <button onclick="loadCity('paris')" class="nav-btn w-full text-left px-5 py-3.5 rounded-2xl transition-all font-semibold text-gray-600 hover:bg-gray-100">🇫🇷 巴黎 (Paris)</button>
+            <p class="text-sm text-gray-500 mb-6 italic">世界的维度，由脚步和镜头共同丈量。</p>
+            
+            <div class="flex flex-col gap-2 overflow-y-auto max-h-[calc(100vh-16rem)] pr-2 custom-scroll pb-10">
+                <button onclick="loadCity('milan')" class="nav-btn w-full text-left px-5 py-3.5 rounded-2xl transition-all font-semibold text-gray-600 hover:bg-gray-100">🇮🇹 米兰 (Milan)</button>
+                <button onclick="loadCity('switzerland')" class="nav-btn w-full text-left px-5 py-3.5 rounded-2xl transition-all font-semibold text-gray-600 hover:bg-gray-100">🇨🇭 瑞士 (Switzerland)</button>
+                <button onclick="loadCity('munich')" class="nav-btn w-full text-left px-5 py-3.5 rounded-2xl transition-all font-semibold text-gray-600 hover:bg-gray-100">🇩🇪 慕尼黑 (Munich)</button>
+                <button onclick="loadCity('dolomites')" class="nav-btn w-full text-left px-5 py-3.5 rounded-2xl transition-all font-semibold text-gray-600 hover:bg-gray-100">🇮🇹 多洛米蒂 (Dolomites)</button>
+                <button onclick="loadCity('norway')" class="nav-btn w-full text-left px-5 py-3.5 rounded-2xl transition-all font-semibold text-gray-600 hover:bg-gray-100">🇳🇴 挪威 (Norway)</button>
+                <button onclick="loadCity('baltic')" class="nav-btn w-full text-left px-5 py-3.5 rounded-2xl transition-all font-semibold text-gray-600 hover:bg-gray-100">🇪🇪 波罗的海三国 (Baltic States)</button>
+                <button onclick="loadCity('dubrovnik')" class="nav-btn w-full text-left px-5 py-3.5 rounded-2xl transition-all font-semibold text-gray-600 hover:bg-gray-100">🇭🇷 杜布罗夫尼克 (Dubrovnik)</button>
+                <button onclick="loadCity('barcelona')" class="nav-btn w-full text-left px-5 py-3.5 rounded-2xl transition-all font-semibold text-gray-600 hover:bg-gray-100">🇪🇸 巴塞罗那 (Barcelona)</button>
+                <button onclick="loadCity('grancanaria')" class="nav-btn w-full text-left px-5 py-3.5 rounded-2xl transition-all font-semibold text-gray-600 hover:bg-gray-100">🇮🇨 大加那利群岛 (Gran Canaria)</button>
+                <button onclick="loadCity('austria')" class="nav-btn w-full text-left px-5 py-3.5 rounded-2xl transition-all font-semibold text-gray-600 hover:bg-gray-100">🇦🇹 奥地利 (Austria)</button>
+                <button onclick="loadCity('andorra')" class="nav-btn w-full text-left px-5 py-3.5 rounded-2xl transition-all font-semibold text-gray-600 hover:bg-gray-100">🇦🇩 安道尔 (Andorra)</button>
+                <button onclick="loadCity('tuscany')" class="nav-btn w-full text-left px-5 py-3.5 rounded-2xl transition-all font-semibold text-gray-600 hover:bg-gray-100">🇮🇹 托斯卡纳 (Tuscany)</button>
                 <button onclick="loadCity('guangzhou')" class="nav-btn w-full text-left px-5 py-3.5 rounded-2xl transition-all font-semibold text-gray-600 hover:bg-gray-100">🇨🇳 广州 (Guangzhou)</button>
             </div>
         </aside>
@@ -53,11 +70,21 @@
     </main>
 
     <script>
+        // 你的全新旅行数据库 (文案已为你精心撰写，照片文件名需与你本地一致)
         const galleryData = {
-            milan: { name: '米兰 (Milan)', desc: '现在的居住地。感受历史与现代设计的交织。', photos: ['milan.jpg', 'milan-2.jpg'] },
-            zurich: { name: '苏黎世 (Zurich)', desc: '在苏黎世湖畔思考算法。', photos: ['zurich.jpg'] },
-            paris: { name: '巴黎 (Paris)', desc: '寻找建筑美学与控制论的碰撞。', photos: ['paris.jpg'] },
-            guangzhou: { name: '广州 (Guangzhou)', desc: '我的家乡。机器人梦开始的地方。', photos: ['guangzhou.jpg'] }
+            milan: { name: '米兰 (Milan)', desc: '现在的居住地。在 Duomo 的光影下感受历史与现代设计的交织。', photos: ['milan-1.jpg', 'milan-2.jpg'] },
+            switzerland: { name: '瑞士 (Switzerland)', desc: '湖光山色之间，感受极致的精准与自然的宁静。', photos: ['switzerland-1.jpg'] },
+            munich: { name: '慕尼黑 (Munich)', desc: '啤酒、科技与巴伐利亚风情的完美融合。', photos: ['munich-1.jpg'] },
+            dolomites: { name: '多洛米蒂 (Dolomites)', desc: '上帝遗留在阿尔卑斯的后花园，令人窒息的白云岩群峰。', photos: ['dolomites-1.jpg'] },
+            norway: { name: '挪威 (Norway)', desc: '深入峡湾与极昼，探索北欧壮丽的自然史诗。', photos: ['norway-1.jpg'] },
+            baltic: { name: '波罗的海三国 (Baltic States)', desc: '穿梭在爱沙尼亚、拉脱维亚与立陶宛的中世纪老城与波罗的海微风中。', photos: ['baltic-1.jpg'] },
+            dubrovnik: { name: '杜布罗夫尼克 (Dubrovnik)', desc: '亚得里亚海的明珠，在君临城的古老城墙上俯瞰蔚蓝。', photos: ['dubrovnik-1.jpg'] },
+            barcelona: { name: '巴塞罗那 (Barcelona)', desc: '高迪的魔幻建筑与地中海的阳光交相辉映。', photos: ['barcelona-1.jpg'] },
+            grancanaria: { name: '大加那利群岛 (Gran Canaria)', desc: '浩瀚大西洋中的微缩大陆，一半是火山，一半是沙丘。', photos: ['grancanaria-1.jpg'] },
+            austria: { name: '奥地利 (Austria)', desc: '沉浸在古典音乐的旋律与阿尔卑斯的雪景之中。', photos: ['austria-1.jpg'] },
+            andorra: { name: '安道尔 (Andorra)', desc: '隐藏在比利牛斯山脉深处的免税袖珍之国。', photos: ['andorra-1.jpg'] },
+            tuscany: { name: '托斯卡纳 (Tuscany)', desc: '连绵的丝柏树与艳阳下的葡萄园，尽享文艺复兴的田园诗意。', photos: ['tuscany-1.jpg'] },
+            guangzhou: { name: '广州 (Guangzhou)', desc: '我的家乡。烟火气与科技创新的融合，我机器人梦开始的地方。', photos: ['guangzhou-1.jpg'] }
         };
 
         function loadCity(cityKey) {
@@ -65,26 +92,33 @@
             const container = document.getElementById('content-container');
             const photoGrid = document.getElementById('photo-grid');
             
+            // 移除所有按钮的激活状态，并为当前点击的按钮添加激活状态
             document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
-            event.currentTarget.classList.add('active');
+            document.querySelector(`button[onclick="loadCity('${cityKey}')"]`).classList.add('active');
 
+            // 渐隐动画
             container.style.opacity = '0';
             
             setTimeout(() => {
+                // 更新文字内容
                 document.getElementById('display-name').innerText = data.name;
                 document.getElementById('display-desc').innerText = data.desc;
+                
+                // 重新渲染照片
                 photoGrid.innerHTML = '';
                 data.photos.forEach(photo => {
                     const imgDiv = document.createElement('div');
                     imgDiv.className = 'w-full aspect-[4/3] rounded-3xl overflow-hidden bg-gray-100 shadow-sm border border-black/5';
-                    // 🌟 因为图片和此 HTML 都在 travel 文件夹下，直接引用文件名
                     imgDiv.innerHTML = `<img src="${photo}" class="gallery-img w-full h-full object-cover">`;
                     photoGrid.appendChild(imgDiv);
                 });
+                
+                // 渐显动画
                 container.style.opacity = '1';
             }, 300);
         }
 
+        // 页面初始化时加载米兰
         window.onload = () => { loadCity('milan'); };
     </script>
 </body>
