@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies | Tingyu CHEN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #F5F5F7; color: #1D1D1F; -webkit-font-smoothing: antialiased; }
+        .glass-nav { background: rgba(245, 245, 247, 0.8); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        
+        /* 胶囊按钮基础样式与悬停动画 */
+        .hobby-btn { transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+        .hobby-btn:hover { transform: translateY(-2px); }
+        .hobby-btn.active { transform: scale(1.05); font-weight: bold; box-shadow: 0 10px 20px -5px rgba(0,0,0,0.1); border-color: transparent; }
+        
+        /* 动态展台的光影缓动效果 */
+        #stage-card { transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); }
+        #stage-content { transition: opacity 0.4s ease, transform 0.4s ease; }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <nav class="glass-nav fixed top-0 w-full z-50">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="../about.html" class="flex items-center text-gray-500 hover:text-black transition-colors font-medium text-sm">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                返回 About Me
+            </a>
+            <div class="flex items-center space-x-6 text-[12px] font-bold tracking-widest uppercase">
+                <a href="../index.html" class="text-gray-400 hover:text-blue-600 transition-colors">Home</a>
+                <a href="../publications.html" class="text-gray-400 hover:text-blue-600 transition-colors">Research</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 pt-32 pb-24">
+        <header class="mb-12 text-center">
+            <h2 class="text-sm font-bold tracking-widest uppercase text-pink-500 mb-4">Passions & Life</h2>
+            <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-6 text-gray-900">算法之外的<span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-400">烟火与诗意</span></h1>
+            <p class="text-gray-500 text-sm max-w-xl mx-auto leading-relaxed">
+                代码需要精准的逻辑，而生活需要多彩的碰撞。点击下方标签，探索我在实验室之外的世界。
+            </p>
+        </header>
+
+        <div class="flex flex-wrap justify-center gap-3 mb-12" id="btn-container">
+            </div>
+
+        <div id="stage-card" class="w-full relative rounded-[2rem] overflow-hidden bg-gradient-to-br from-blue-400 to-indigo-600 shadow-2xl p-10 md:p-16 text-white min-h-[350px] flex items-center justify-center border border-white/20">
+            <div id="stage-watermark" class="absolute -right-10 -bottom-10 text-[15rem] opacity-10 select-none transition-all duration-700 pointer-events-none">🏸</div>
+            
+            <div id="stage-content" class="relative z-10 w-full max-w-2xl text-center md:text-left flex flex-col md:flex-row items-center md:items-start gap-8">
+                <div id="stage-icon" class="w-24 h-24 shrink-0 rounded-full bg-white/20 backdrop-blur-xl flex items-center justify-center text-5xl shadow-inner border border-white/30">
+                    🏸
+                </div>
+                <div class="flex-1">
+                    <h3 id="stage-title" class="text-3xl font-bold mb-4 tracking-tight">羽毛球 (Badminton)</h3>
+                    <p id="stage-desc" class="text-white/90 text-sm leading-relaxed md:text-base font-medium">
+                        在球场上挥洒汗水，享受绝杀的快感。曾斩获区运会青年组第六名，并因跑得快、爆发力强，被网球老师戏称为“小钢炮”。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        // 数据库：每个爱好都有独一无二的主题色 (Tailwind 渐变类名)
+        const hobbiesData = {
+            badminton: { icon: '🏸', name: '羽毛球', title: '羽毛球竞技', desc: '在球场上挥洒汗水，享受绝杀的快感。曾斩获区运会青年组第六名，并因跑得快、爆发力强，被老师戏称为“小钢炮”。', color: 'from-blue-500 to-indigo-600', shadow: 'shadow-blue-500/40', btnColor: 'text-blue-600 bg-blue-50' },
+            music: { icon: '🎸', name: '乐器与古典', title: '电子琴与吉他', desc: '指尖流淌的音符。熟练弹奏电子琴与吉他，在黑白键与六根弦之间，体会巴赫的理性与肖邦的浪漫。', color: 'from-purple-500 to-fuchsia-600', shadow: 'shadow-purple-500/40', btnColor: 'text-purple-600 bg-purple-50' },
+            basketball: { icon: '🏀', name: '篮球与健身', title: '篮球 & 健身', desc: '多巴胺的狂欢。用极度的自律雕刻身体，在篮球场上释放竞技热情，为高强度的科研保持充沛的体能。', color: 'from-orange-500 to-red-600', shadow: 'shadow-orange-500/40', btnColor: 'text-orange-600 bg-orange-50' },
+            cooking: { icon: '🍳', name: '烹饪', title: '美食烹饪', desc: '代码之外的创造力。享受食材在不同温度下碰撞出的化学反应，用一桌好菜慰藉留学的中国胃。', color: 'from-amber-400 to-orange-500', shadow: 'shadow-amber-500/40', btnColor: 'text-amber-600 bg-amber-50' },
+            reading: { icon: '📖', name: '阅读', title: '深度阅读', desc: '灵魂的补给站。在文字中跨越时空，保持对未知世界的好奇，探索控制论逻辑与人文社科的边界。', color: 'from-emerald-400 to-teal-500', shadow: 'shadow-emerald-500/40', btnColor: 'text-emerald-600 bg-emerald-50' },
+            coffee: { icon: '☕', name: '咖啡', title: '咖啡鉴赏', desc: '意式醇香。穿梭在米兰的街头巷尾，寻找最地道、最馥郁的 Espresso，品味苦涩过后的回甘。', color: 'from-stone-500 to-neutral-700', shadow: 'shadow-stone-500/40', btnColor: 'text-stone-600 bg-stone-100' },
+            photo: { icon: '📷', name: '摄影', title: '城市摄影', desc: '定格瞬间的艺术。用镜头捕捉城市建筑的几何美感，记录旅途中的光影与生活的真实温度。', color: 'from-cyan-500 to-blue-500', shadow: 'shadow-cyan-500/40', btnColor: 'text-cyan-600 bg-cyan-50' }
+        };
+
+        // 初始化按钮
+        const btnContainer = document.getElementById('btn-container');
+        Object.keys(hobbiesData).forEach(key => {
+            const data = hobbiesData[key];
+            const btn = document.createElement('button');
+            // 默认样式：白底、灰字、细边框
+            btn.className = `hobby-btn px-5 py-2 rounded-full border border-gray-200 bg-white text-gray-500 text-xs font-semibold flex items-center gap-2 outline-none`;
+            btn.innerHTML = `<span class="text-base">${data.icon}</span> ${data.name}`;
+            btn.onclick = () => switchHobby(key, btn);
+            btnContainer.appendChild(btn);
+        });
+
+        // 切换逻辑
+        function switchHobby(key, clickedBtn) {
+            const data = hobbiesData[key];
+            const stage = document.getElementById('stage-card');
+            const content = document.getElementById('stage-content');
+            
+            // 1. 重置所有按钮样式为未激活
+            document.querySelectorAll('.hobby-btn').forEach(b => {
+                b.className = `hobby-btn px-5 py-2 rounded-full border border-gray-200 bg-white text-gray-500 text-xs font-semibold flex items-center gap-2 outline-none`;
+            });
+            // 2. 激活当前按钮 (赋予其专属的主题色)
+            clickedBtn.className = `hobby-btn active px-5 py-2 rounded-full ${data.btnColor} text-xs flex items-center gap-2 outline-none`;
+
+            // 3. 内容淡出
+            content.style.opacity = '0';
+            content.style.transform = 'translateY(10px)';
+            document.getElementById('stage-watermark').style.transform = 'scale(0.8) rotate(-10deg)';
+
+            // 4. 等待淡出后替换内容与背景
+            setTimeout(() => {
+                document.getElementById('stage-icon').innerText = data.icon;
+                document.getElementById('stage-watermark').innerText = data.icon;
+                document.getElementById('stage-title').innerText = data.title;
+                document.getElementById('stage-desc').innerText = data.desc;
+
+                // 移除旧颜色/阴影，添加新颜色/阴影
+                stage.className = `w-full relative rounded-[2rem] overflow-hidden bg-gradient-to-br ${data.color} shadow-2xl ${data.shadow} p-10 md:p-16 text-white min-h-[350px] flex items-center justify-center border border-white/20 transition-all duration-700`;
+
+                // 内容淡入
+                content.style.opacity = '1';
+                content.style.transform = 'translateY(0)';
+                document.getElementById('stage-watermark').style.transform = 'scale(1) rotate(0deg)';
+            }, 300);
+        }
+
+        // 默认触发第一个爱好 (羽毛球)
+        window.onload = () => {
+            const firstBtn = btnContainer.firstChild;
+            switchHobby('badminton', firstBtn);
+        };
+    </script>
+</body>
+</html>
