@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Gallery | Tingyu CHEN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #FBFBFD; color: #1D1D1F; -webkit-font-smoothing: antialiased; }
+        .glass-nav { background: rgba(251, 251, 253, 0.8); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .nav-btn.active { background-color: #1D1D1F; color: #FFFFFF; }
+        .gallery-img { transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1); }
+        .gallery-img:hover { transform: scale(1.03); }
+    </style>
+</head>
+<body>
 
+    <nav class="glass-nav fixed top-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="../../about.html" class="flex items-center text-gray-500 hover:text-black transition-colors font-medium text-sm">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                返回 About Me
+            </a>
+            <div class="flex items-center space-x-6 text-[12px] font-bold tracking-widest uppercase">
+                <a href="../../index.html" class="text-gray-400 hover:text-blue-600 transition-colors">Home</a>
+                <a href="../../publications.html" class="text-gray-400 hover:text-blue-600 transition-colors">Research</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6 pt-24 pb-20 flex flex-col md:flex-row gap-12">
+        <aside class="w-full md:w-1/4 md:sticky md:top-24 h-fit">
+            <h1 class="text-3xl font-bold tracking-tight mb-2">光影与足迹</h1>
+            <p class="text-sm text-gray-500 mb-8 italic">世界的维度，由脚步和镜头共同丈量。</p>
+            <div class="flex flex-col gap-2">
+                <button onclick="loadCity('milan')" class="nav-btn active w-full text-left px-5 py-3.5 rounded-2xl transition-all font-semibold text-gray-600 hover:bg-gray-100">🇮🇹 米兰 (Milan)</button>
+                <button onclick="loadCity('zurich')" class="nav-btn w-full text-left px-5 py-3.5 rounded-2xl transition-all font-semibold text-gray-600 hover:bg-gray-100">🇨🇭 苏黎世 (Zurich)</button>
+                <button onclick="loadCity('paris')" class="nav-btn w-full text-left px-5 py-3.5 rounded-2xl transition-all font-semibold text-gray-600 hover:bg-gray-100">🇫🇷 巴黎 (Paris)</button>
+                <button onclick="loadCity('guangzhou')" class="nav-btn w-full text-left px-5 py-3.5 rounded-2xl transition-all font-semibold text-gray-600 hover:bg-gray-100">🇨🇳 广州 (Guangzhou)</button>
+            </div>
+        </aside>
+
+        <section class="w-full md:w-3/4">
+            <div id="content-container" class="transition-opacity duration-500">
+                <div class="mb-10">
+                    <h2 id="display-name" class="text-4xl font-bold mb-4">米兰 (Milan)</h2>
+                    <p id="display-desc" class="text-lg text-gray-500 leading-relaxed max-w-2xl">在 Duomo 的光影下感受历史与现代设计的交织。</p>
+                </div>
+                <div id="photo-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const galleryData = {
+            milan: { name: '米兰 (Milan)', desc: '现在的居住地。感受历史与现代设计的交织。', photos: ['milan.jpg', 'milan-2.jpg'] },
+            zurich: { name: '苏黎世 (Zurich)', desc: '在苏黎世湖畔思考算法。', photos: ['zurich.jpg'] },
+            paris: { name: '巴黎 (Paris)', desc: '寻找建筑美学与控制论的碰撞。', photos: ['paris.jpg'] },
+            guangzhou: { name: '广州 (Guangzhou)', desc: '我的家乡。机器人梦开始的地方。', photos: ['guangzhou.jpg'] }
+        };
+
+        function loadCity(cityKey) {
+            const data = galleryData[cityKey];
+            const container = document.getElementById('content-container');
+            const photoGrid = document.getElementById('photo-grid');
+            
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+
+            container.style.opacity = '0';
+            
+            setTimeout(() => {
+                document.getElementById('display-name').innerText = data.name;
+                document.getElementById('display-desc').innerText = data.desc;
+                photoGrid.innerHTML = '';
+                data.photos.forEach(photo => {
+                    const imgDiv = document.createElement('div');
+                    imgDiv.className = 'w-full aspect-[4/3] rounded-3xl overflow-hidden bg-gray-100 shadow-sm border border-black/5';
+                    // 🌟 因为图片和此 HTML 都在 travel 文件夹下，直接引用文件名
+                    imgDiv.innerHTML = `<img src="${photo}" class="gallery-img w-full h-full object-cover">`;
+                    photoGrid.appendChild(imgDiv);
+                });
+                container.style.opacity = '1';
+            }, 300);
+        }
+
+        window.onload = () => { loadCity('milan'); };
+    </script>
+</body>
+</html>
