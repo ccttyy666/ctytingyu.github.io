@@ -56,6 +56,7 @@
     </nav>
 
     <main class="max-w-6xl mx-auto px-6 pt-32 pb-20">
+        
         <header class="mb-16 text-center">
             <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-4 animate-in fade-in slide-in-from-bottom-4 duration-1000">About <span class="gradient-text">Me</span></h1>
             
@@ -94,7 +95,8 @@
                 </div>
             </div>
 
-           <div class="md:col-span-1 bento-card p-6 flex flex-col justify-between"> <div class="flex justify-between items-center mb-6">
+            <div class="md:col-span-2 bento-card p-8 flex flex-col justify-between"> 
+                <div class="flex justify-between items-center mb-6">
                     <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest">Hobbies</h3>
                     <a href="about/hobbies.html" class="group flex items-center text-[10px] font-bold text-blue-500 hover:text-blue-600 transition-colors bg-blue-50 hover:bg-blue-100 px-2 py-1 rounded-md">
                         MORE 
@@ -102,35 +104,33 @@
                     </a>
                 </div>
                 
-                <div class="space-y-5">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 shrink-0 rounded-full bg-blue-50 flex items-center justify-center text-lg">🏸</div>
-                        <div>
-                            <h4 class="font-bold text-sm text-gray-800">竞技运动</h4>
-                            <p class="text-[11px] text-gray-500 mt-0.5 leading-tight">羽毛球区运第六 / 篮球</p>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 shrink-0 rounded-full bg-blue-50 flex items-center justify-center text-xl shadow-sm border border-blue-100/50">🏸</div>
+                        <div class="flex-1 min-w-0"> <h4 class="font-bold text-sm text-gray-800">竞技运动</h4>
+                            <p class="text-xs text-gray-500 mt-1 leading-tight truncate">羽毛球区运第六 / 篮球</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 shrink-0 rounded-full bg-purple-50 flex items-center justify-center text-lg">🎸</div>
-                        <div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 shrink-0 rounded-full bg-purple-50 flex items-center justify-center text-xl shadow-sm border border-purple-100/50">🎸</div>
+                        <div class="flex-1 min-w-0">
                             <h4 class="font-bold text-sm text-gray-800">乐器与古典乐</h4>
-                            <p class="text-[11px] text-gray-500 mt-0.5 leading-tight">电子琴、吉他与古典浪漫</p>
+                            <p class="text-xs text-gray-500 mt-1 leading-tight truncate">电子琴、吉他与古典浪漫</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 shrink-0 rounded-full bg-stone-50 flex items-center justify-center text-lg">📷</div>
-                        <div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 shrink-0 rounded-full bg-stone-50 flex items-center justify-center text-xl shadow-sm border border-stone-100/50">📷</div>
+                        <div class="flex-1 min-w-0">
                             <h4 class="font-bold text-sm text-gray-800">摄影 & 咖啡</h4>
-                            <p class="text-[11px] text-gray-500 mt-0.5 leading-tight">捕捉几何美感，品鉴 Espresso</p>
+                            <p class="text-xs text-gray-500 mt-1 leading-tight truncate">捕捉几何美感，品鉴 Espresso</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-           <div class="md:col-span-3 bento-card flex flex-col md:flex-row p-0 min-h-[550px]">
-    
-    <div class="w-full md:w-1/3 border-r border-gray-50 p-6 space-y-2 flex flex-col justify-center bg-white/50">
-                    <div class="flex justify-between items-center mb-4">
+            <div class="md:col-span-3 bento-card flex flex-col md:flex-row p-0 min-h-[500px]">
+                <div class="w-full md:w-2/5 border-r border-gray-50 p-8 space-y-2 flex flex-col justify-center bg-white/50">
+                    <div class="flex justify-between items-center mb-6">
                         <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest">Travel Footprints</h3>
                         <a href="about/travel/index.html" class="group flex items-center text-[10px] font-bold text-blue-500 hover:text-blue-600 transition-colors bg-blue-50 hover:bg-blue-100 px-2.5 py-1 rounded-md">
                             MORE 
@@ -138,62 +138,60 @@
                         </a>
                     </div>
                     
-                    <button onclick="switchCity('milan')" class="city-btn active-city w-full text-left px-4 py-3 rounded-xl transition-all font-medium text-sm">🇮🇹 米兰 (Milan)</button>
-                    <button onclick="switchCity('zurich')" class="city-btn w-full text-left px-4 py-3 rounded-xl transition-all font-medium text-sm text-gray-400 hover:bg-gray-50">🇨🇭 苏黎世 (Zurich)</button>
-                    <button onclick="switchCity('paris')" class="city-btn w-full text-left px-4 py-3 rounded-xl transition-all font-medium text-sm text-gray-400 hover:bg-gray-50">🇫🇷 巴黎 (Paris)</button>
-                    <button onclick="switchCity('guangzhou')" class="city-btn w-full text-left px-4 py-3 rounded-xl transition-all font-medium text-sm text-gray-400 hover:bg-gray-50">🇨🇳 广州 (Guangzhou)</button>
+                    <button onclick="switchCity('milan')" class="city-btn active-city w-full text-left px-4 py-3.5 rounded-xl transition-all font-medium text-sm">🇮🇹 米兰 (Milan)</button>
+                    <button onclick="switchCity('zurich')" class="city-btn w-full text-left px-4 py-3.5 rounded-xl transition-all font-medium text-sm text-gray-400 hover:bg-gray-50">🇨🇭 苏黎世 (Zurich)</button>
+                    <button onclick="switchCity('paris')" class="city-btn w-full text-left px-4 py-3.5 rounded-xl transition-all font-medium text-sm text-gray-400 hover:bg-gray-50">🇫🇷 巴黎 (Paris)</button>
+                    <button onclick="switchCity('guangzhou')" class="city-btn w-full text-left px-4 py-3.5 rounded-xl transition-all font-medium text-sm text-gray-400 hover:bg-gray-50">🇨🇳 广州 (Guangzhou)</button>
                 </div>
             
-                <div id="city-stage" class="w-full md:w-2/3 p-8 flex flex-col justify-between bg-gradient-to-br from-blue-50 to-white transition-all duration-500">
+                <div id="city-stage" class="w-full md:w-3/5 p-8 flex flex-col justify-between bg-gradient-to-br from-blue-50 to-white transition-all duration-500">
                     <div id="city-content" class="animate-in fade-in duration-700 flex flex-col h-full">
                         
-                        <h4 id="city-name" class="text-3xl font-bold mb-2 text-gray-900 shrink-0">米兰</h4>
+                        <h4 id="city-name" class="text-4xl font-bold mb-3 text-gray-900 shrink-0">米兰</h4>
                         <p id="city-desc" class="text-gray-500 text-sm leading-relaxed mb-6 shrink-0">现在的居住地。在 Duomo 的光影下感受历史与现代设计的交织。</p>
                         
                         <div class="flex-1 w-full relative overflow-hidden rounded-2xl shadow-sm border border-black/5 bg-gray-100 min-h-[200px]">
-                            <img id="city-image" src="about/milan.jpg" alt="City View" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                            <img id="city-image" src="about/travel/milan.jpg" alt="City View" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105">
                         </div>
                         
                     </div>
                     
                     <div class="flex flex-wrap gap-2 mt-6 shrink-0">
-                        <span id="tag-1" class="px-3 py-1 bg-white border border-gray-100 rounded-full text-[10px] shadow-sm text-gray-600 font-medium">设计之都</span>
-                        <span id="tag-2" class="px-3 py-1 bg-white border border-gray-100 rounded-full text-[10px] shadow-sm text-gray-600 font-medium">意式生活</span>
+                        <span id="tag-1" class="px-3 py-1.5 bg-white border border-gray-100 rounded-full text-[10px] shadow-sm text-gray-600 font-bold uppercase tracking-wider">设计之都</span>
+                        <span id="tag-2" class="px-3 py-1.5 bg-white border border-gray-100 rounded-full text-[10px] shadow-sm text-gray-600 font-bold uppercase tracking-wider">意式生活</span>
                     </div>
                 </div>
-                
             </div>
             
             <script>
-                // 在数据中加入了 img 字段，对应你即将上传的文件名
                 const cityData = {
                     milan: { 
                         name: '米兰', 
                         desc: '现在的居住地。在 Duomo 的光影下感受历史与现代设计的交织。', 
                         tags: ['设计之都', '意式生活'], 
                         color: 'from-blue-50', 
-                        img: 'about/milan.jpg' 
+                        img: 'about/travel/milan.jpg' 
                     },
                     zurich: { 
                         name: '苏黎世', 
                         desc: '在苏黎世湖畔思考算法，感受瑞士极致的精准与自然的宁静。', 
                         tags: ['金融中心', '湖光山色'], 
                         color: 'from-gray-100', 
-                        img: 'about/zurich.jpg' 
+                        img: 'about/travel/zurich.jpg' 
                     },
                     paris: { 
                         name: '巴黎', 
                         desc: '漫步在塞纳河畔，寻找建筑美学与控制论之间的灵感碰撞。', 
                         tags: ['艺术殿堂', '浪漫建筑'], 
                         color: 'from-rose-50', 
-                        img: 'about/paris.jpg' 
+                        img: 'about/travel/paris.jpg' 
                     },
                     guangzhou: { 
                         name: '广州', 
                         desc: '我的家乡。烟火气与科技创新的融合，我机器人梦开始的地方。', 
                         tags: ['岭南文化', '美食之都'], 
                         color: 'from-orange-50', 
-                        img: 'about/guangzhou.jpg' 
+                        img: 'about/travel/guangzhou.jpg' 
                     }
                 };
             
@@ -210,10 +208,9 @@
                         document.getElementById('city-desc').innerText = data.desc;
                         document.getElementById('tag-1').innerText = data.tags[0];
                         document.getElementById('tag-2').innerText = data.tags[1];
-                        // 核心：动态替换图片路径
                         document.getElementById('city-image').src = data.img;
                         
-                        stage.className = `w-full md:w-2/3 p-8 flex flex-col justify-between bg-gradient-to-br ${data.color} to-white transition-all duration-500`;
+                        stage.className = `w-full md:w-3/5 p-8 flex flex-col justify-between bg-gradient-to-br ${data.color} to-white transition-all duration-500`;
                         
                         content.style.opacity = '1';
                         content.style.transform = 'translateY(0)';
@@ -227,27 +224,30 @@
                     activeBtn.classList.remove('text-gray-400');
                     activeBtn.classList.add('bg-gray-900', 'text-white', 'active-city');
                 }
+                
                 // 初始化
                 document.querySelector('.city-btn').classList.add('bg-gray-900', 'text-white');
             </script>
 
-            <a href="about/activities.html" class="md:col-span-3 bento-card p-8 bg-gradient-to-br from-indigo-500 to-purple-600 text-white group cursor-pointer flex flex-col justify-between min-h-[350px]">
+            <a href="about/activities.html" class="md:col-span-3 bento-card p-10 bg-gradient-to-br from-indigo-500 to-purple-600 text-white group cursor-pointer flex flex-col justify-between min-h-[500px]">
                 <div>
-                    <div class="flex justify-between items-center mb-6">
+                    <div class="flex justify-between items-center mb-8">
                         <h3 class="text-xs font-bold text-indigo-200 uppercase tracking-widest">Beyond the Lab</h3>
-                        <svg class="w-6 h-6 text-white opacity-0 group-hover:opacity-100 transition-all duration-400 transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center transform group-hover:scale-110 transition-transform">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7 M5 12h16"></path></svg>
+                        </div>
                     </div>
                     
-                    <h4 class="text-3xl font-bold mb-4 tracking-tight">不设限的社会影响力</h4>
-                    <p class="text-indigo-50/90 text-sm leading-relaxed mb-6 max-w-md">
-                        走出实验室，我享受跨界带来的碰撞。我是 Solarsail Super Computer 的联合创始人、学术期刊审稿人、自媒体创作者，也是一位拥有上百小时服务时长的支教志愿者。
+                    <h4 class="text-4xl font-bold mb-6 tracking-tight leading-tight">不设限的<br>社会影响力</h4>
+                    <p class="text-indigo-50/90 text-sm leading-relaxed mb-6 max-w-sm">
+                        走出实验室，我享受跨界带来的碰撞。我是 Solarsail Super Computer 的联合创始人、学术期刊审稿人、百万播放的自媒体创作者，也是一位坚持长期支教的志愿者。
                     </p>
                 </div>
                 
-                <div class="flex flex-wrap gap-2 mt-4">
-                    <span class="px-3 py-1.5 bg-white/20 backdrop-blur-md rounded-full text-[10px] font-bold tracking-wider uppercase border border-white/10 shadow-sm">Co-founder</span>
-                    <span class="px-3 py-1.5 bg-white/20 backdrop-blur-md rounded-full text-[10px] font-bold tracking-wider uppercase border border-white/10 shadow-sm">Reviewer</span>
-                    <span class="px-3 py-1.5 bg-white/20 backdrop-blur-md rounded-full text-[10px] font-bold tracking-wider uppercase border border-white/10 shadow-sm">Content Creator</span>
+                <div class="flex flex-wrap gap-3 mt-4">
+                    <span class="px-4 py-2 bg-white/20 backdrop-blur-md rounded-full text-[11px] font-bold tracking-wider uppercase border border-white/10 shadow-sm">Co-founder</span>
+                    <span class="px-4 py-2 bg-white/20 backdrop-blur-md rounded-full text-[11px] font-bold tracking-wider uppercase border border-white/10 shadow-sm">Reviewer</span>
+                    <span class="px-4 py-2 bg-white/20 backdrop-blur-md rounded-full text-[11px] font-bold tracking-wider uppercase border border-white/10 shadow-sm">Content Creator</span>
                 </div>
             </a>
 
