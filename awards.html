@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awards | Tingyu CHEN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #FBFBFD;
+            color: #1D1D1F;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-nav {
+            background: rgba(251, 251, 253, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .award-card {
+            background: #FFFFFF;
+            border-radius: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+        .award-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+            border-color: rgba(0, 113, 227, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #F59E0B, #E11D48);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="glass-nav fixed top-0 w-full z-50">
+        <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center text-gray-500 hover:text-black transition-colors font-medium text-sm">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                返回主页
+            </a>
+            <span class="text-[12px] font-bold tracking-widest uppercase text-gray-400">Milestones</span>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 pt-32 pb-20">
+        <header class="mb-16">
+            <h2 class="text-sm font-bold tracking-widest uppercase text-amber-500 mb-4">Milestones & Recognition</h2>
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">高光时刻与<span class="gradient-text">奖项认可</span></h1>
+            <p class="text-lg text-gray-500 max-w-2xl leading-relaxed">每一次竞赛不仅是对算法极限的挑战，更是将数学理论落地到实际工程问题中的宝贵实践。</p>
+        </header>
+
+        <div class="space-y-6">
+            
+            <div class="award-card p-8 md:p-10 flex flex-col md:flex-row gap-8 items-start">
+                <div class="w-16 h-16 rounded-2xl bg-amber-50 flex items-center justify-center text-amber-500 text-3xl shrink-0">
+                    🏆
+                </div>
+                <div class="flex-1">
+                    <div class="flex items-center gap-3 mb-2">
+                        <h3 class="text-2xl font-bold text-gray-900">美国大学生数学建模竞赛 (MCM)</h3>
+                        <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full">一等奖 / Meritorious Winner</span>
+                    </div>
+                    <p class="text-sm text-gray-400 font-medium mb-6">COMAP (美国数学及其应用联合会) · 全球性数模竞赛</p>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                        在为期 4 天的极限挑战中，针对复杂的现实问题构建数学模型。负责核心算法的推导与实现，利用优化算法和计算机仿真，提供了一套具有高鲁棒性的解决方案，并协助完成了全英文学术论文的撰写。
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">数学建模</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">算法推导</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">团队协作</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="award-card p-8 md:p-10 flex flex-col md:flex-row gap-8 items-start">
+                <div class="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-500 text-3xl shrink-0">
+                    🏅
+                </div>
+                <div class="flex-1">
+                    <div class="flex items-center gap-3 mb-2">
+                        <h3 class="text-2xl font-bold text-gray-900">亚太地区数学建模竞赛 (APMCM)</h3>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full">二等奖 / Second Prize</span>
+                    </div>
+                    <p class="text-sm text-gray-400 font-medium mb-6">APMCM 组委会</p>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                        运用统计学、机器学习等数据驱动方法对复杂数据系统进行深入挖掘。在数据预处理、特征工程及模型评估环节发挥关键作用，有效提升了预测模型的准确率与泛化能力。
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">数据挖掘</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">特征工程</span>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+    </main>
+
+</body>
+</html>
