@@ -6,44 +6,73 @@
     <title>Projects | Tingyu CHEN</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: #FFFFFF;
+            background-color: #F5F5F7; /* 统一使用 Apple 浅灰底色 */
             color: #1D1D1F;
             -webkit-font-smoothing: antialiased;
         }
-        .project-card {
-            background: #FBFBFD;
+        .bento-card {
+            background: #FFFFFF;
             border-radius: 32px;
             transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-            border: 1px solid rgba(0,0,0,0.02);
+            border: 1px solid rgba(0,0,0,0.03);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
         }
-        .project-card:hover {
+        .bento-card:hover {
             transform: translateY(-8px);
-            background: #FFFFFF;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.06);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.08);
             border-color: rgba(0,0,0,0.05);
         }
         .glass-nav {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(245, 245, 247, 0.8);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #0071E3, #42B4E6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
 <body>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <nav class="glass-nav fixed top-0 w-full z-50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center text-gray-500 hover:text-gray-900 transition-colors font-medium text-sm">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                返回首页
+            </a>
+            <div class="space-x-8 text-[12px] font-bold tracking-widest uppercase text-gray-400">
+                <a href="about.html" class="hover:text-blue-600 transition-colors">About Me</a>
+                <a href="publications.html" class="hover:text-blue-600 transition-colors">Research</a>
+            </div>
+        </div>
+    </nav>
 
-            <div class="bento-card p-8 bg-white border border-gray-100 rounded-[28px] shadow-sm hover:shadow-lg transition-shadow flex flex-col justify-between">
+    <main class="max-w-6xl mx-auto px-6 pt-32 pb-20">
+        
+        <header class="mb-16 text-center animate-in fade-in slide-in-from-bottom-4 duration-1000">
+            <h2 class="text-sm font-bold tracking-widest uppercase text-blue-500 mb-4">Engineering Portfolio</h2>
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-6">开源项目与<span class="gradient-text">仿真实验</span></h1>
+            <p class="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                "Hardware is hard, but simulation makes it possible." <br>
+                从底层阻抗控制到顶层具身智能的开源探索之路。
+            </p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 animate-in fade-in duration-1000 delay-300">
+
+            <div class="bento-card p-8 flex flex-col justify-between">
                 <div>
                     <div class="flex items-center gap-2 mb-4">
                         <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
                         <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">In Progress · Kinematics & Control</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-900 leading-tight">6-DOF Manipulator Impedance Control & Tracking</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 leading-tight">6-DOF Manipulator Impedance Control</h3>
                     <p class="text-sm text-gray-500 mb-6 leading-relaxed">
                         基于 ROS2 与 Gazebo 构建 6 自由度机械臂的物理仿真系统。实现基于运动学逆解的笛卡尔空间轨迹精确跟踪，并自研阻抗控制（Impedance Control）算法框架，实现机械臂末端与未知环境的柔顺接触与力控交互。
                     </p>
@@ -61,7 +90,7 @@
                 </div>
             </div>
         
-            <div class="bento-card p-8 bg-white border border-gray-100 rounded-[28px] shadow-sm hover:shadow-lg transition-shadow flex flex-col justify-between">
+            <div class="bento-card p-8 flex flex-col justify-between">
                 <div>
                     <div class="flex items-center gap-2 mb-4">
                         <span class="w-2 h-2 rounded-full bg-gray-300"></span>
@@ -85,7 +114,7 @@
                 </div>
             </div>
         
-            <div class="md:col-span-2 bento-card p-0 bg-white border border-gray-100 rounded-[28px] shadow-sm hover:shadow-lg transition-shadow flex flex-col md:flex-row overflow-hidden">
+            <div class="md:col-span-2 bento-card p-0 flex flex-col md:flex-row overflow-hidden group">
                 
                 <div class="p-8 md:w-1/2 flex flex-col justify-center">
                     <div class="flex items-center gap-2 mb-4">
@@ -104,20 +133,21 @@
                     </div>
                 </div>
                 
-                <div class="md:w-1/2 bg-gradient-to-br from-rose-50 to-orange-50 flex items-center justify-center p-8 min-h-[250px]">
-                    <div class="text-center">
+                <div class="md:w-1/2 bg-gradient-to-br from-rose-50 to-orange-50 flex items-center justify-center p-8 min-h-[250px] relative overflow-hidden">
+                    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNDAgMTAgTSAxMCAwIEwgMTAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgwLDAsMCwwLjA1KSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-50"></div>
+                    
+                    <div class="text-center relative z-10 transform group-hover:scale-105 transition-transform duration-500">
                         <div class="text-5xl mb-4 opacity-50">🤖</div>
-                        <h4 class="text-rose-300 font-black text-3xl uppercase tracking-widest opacity-50">Simulation</h4>
-                        <p class="text-rose-200 text-sm mt-2 font-medium">Environment Setup in Progress...</p>
+                        <h4 class="text-rose-400 font-black text-3xl uppercase tracking-widest opacity-60">Simulation</h4>
+                        <p class="text-rose-400/80 text-sm mt-2 font-medium tracking-wide">Environment Setup in Progress...</p>
                     </div>
                 </div>
         
             </div>
         </div>
-        </div>
     </main>
 
-    <footer class="text-center py-12 text-gray-400 text-xs">
+    <footer class="text-center py-12 text-gray-400 text-xs tracking-widest uppercase">
         &copy; 2026 Tingyu CHEN. Built with Apple Design Standards.
     </footer>
 
