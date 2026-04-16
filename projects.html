@@ -35,89 +35,85 @@
 </head>
 <body>
 
-    <nav class="glass-nav fixed top-0 w-full z-50">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="index.html" class="flex items-center text-gray-400 hover:text-black transition-colors font-medium text-sm">
-                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                返回主页
-            </a>
-            <span class="text-[12px] font-bold tracking-widest uppercase text-gray-300">Selected Works</span>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <div class="bento-card p-8 bg-white border border-gray-100 rounded-[28px] shadow-sm hover:shadow-lg transition-shadow flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">In Progress · Kinematics & Control</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 leading-tight">6-DOF Manipulator Impedance Control & Tracking</h3>
+                    <p class="text-sm text-gray-500 mb-6 leading-relaxed">
+                        基于 ROS2 与 Gazebo 构建 6 自由度机械臂的物理仿真系统。实现基于运动学逆解的笛卡尔空间轨迹精确跟踪，并自研阻抗控制（Impedance Control）算法框架，实现机械臂末端与未知环境的柔顺接触与力控交互。
+                    </p>
+                </div>
+                <div>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-lg text-[11px] font-semibold border border-gray-100">ROS2 (Humble)</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-lg text-[11px] font-semibold border border-gray-100">C++</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-lg text-[11px] font-semibold border border-gray-100">Impedance Control</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-lg text-[11px] font-semibold border border-gray-100">Gazebo</span>
+                    </div>
+                    <a href="#" class="text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors flex items-center gap-1">
+                        GitHub Repo (Building...) <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        
+            <div class="bento-card p-8 bg-white border border-gray-100 rounded-[28px] shadow-sm hover:shadow-lg transition-shadow flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Planning · Perception & MoveIt2</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 leading-tight">Vision-Guided Autonomous Bin Picking</h3>
+                    <p class="text-sm text-gray-500 mb-6 leading-relaxed">
+                        结合 RGB-D 深度相机实现的工业级无序抓取仿真系统。利用 PCL 处理点云数据进行目标位姿估计，并深度定制 MoveIt2 的规划管线，通过 RRT* 算法实现复杂动态障碍物环境下的无碰撞运动规划。
+                    </p>
+                </div>
+                <div>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-lg text-[11px] font-semibold border border-gray-100">MoveIt2</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-lg text-[11px] font-semibold border border-gray-100">PCL</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-lg text-[11px] font-semibold border border-gray-100">RRT*</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-lg text-[11px] font-semibold border border-gray-100">Computer Vision</span>
+                    </div>
+                    <span class="text-sm font-medium text-gray-400 flex items-center gap-1">
+                        架构设计中 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </span>
+                </div>
+            </div>
+        
+            <div class="md:col-span-2 bento-card p-0 bg-white border border-gray-100 rounded-[28px] shadow-sm hover:shadow-lg transition-shadow flex flex-col md:flex-row overflow-hidden">
+                
+                <div class="p-8 md:w-1/2 flex flex-col justify-center">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="w-2 h-2 rounded-full bg-rose-400"></span>
+                        <span class="text-[10px] font-bold text-rose-400 uppercase tracking-widest">Future Research · Embodied AI</span>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4 text-gray-900 leading-tight">Sim2Real: RL-based Robotic Arm Manipulation</h3>
+                    <p class="text-sm text-gray-500 mb-6 leading-relaxed">
+                        探索具身智能的前沿落地。计划在 NVIDIA Isaac Sim 中搭建支持 GPU 加速的高度逼真强化学习环境，使用 PyTorch 训练 PPO 算法，让机械臂自主学习复杂的抓取、堆叠等非结构化任务，攻克 Sim2Real 域间隙难题。
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-rose-50 text-rose-600 rounded-lg text-[11px] font-bold border border-rose-100">Isaac Sim</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-lg text-[11px] font-semibold border border-gray-100">PyTorch</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-lg text-[11px] font-semibold border border-gray-100">Reinforcement Learning</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-lg text-[11px] font-semibold border border-gray-100">Sim2Real</span>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 bg-gradient-to-br from-rose-50 to-orange-50 flex items-center justify-center p-8 min-h-[250px]">
+                    <div class="text-center">
+                        <div class="text-5xl mb-4 opacity-50">🤖</div>
+                        <h4 class="text-rose-300 font-black text-3xl uppercase tracking-widest opacity-50">Simulation</h4>
+                        <p class="text-rose-200 text-sm mt-2 font-medium">Environment Setup in Progress...</p>
+                    </div>
+                </div>
+        
+            </div>
         </div>
-    </nav>
-
-    <main class="max-w-6xl mx-auto px-6 pt-32 pb-20">
-        <header class="mb-16">
-            <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-4">工程实践</h1>
-            <p class="text-xl text-gray-400">从仿真模拟到算法实现，探索控制论的无限可能。</p>
-        </header>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-            <div class="project-card p-10 flex flex-col justify-between min-h-[450px]">
-                <div>
-                    <div class="flex items-center gap-2 mb-6">
-                        <span class="w-2 h-2 rounded-full bg-green-500"></span>
-                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Completed</span>
-                    </div>
-                    <h2 class="text-3xl font-bold mb-4 leading-tight">Warehouse Mobile Robot<br>Trajectory Planning</h2>
-                    <p class="text-gray-500 mb-8 leading-relaxed">
-                        为仓库移动机器人设计高效的轨迹规划算法。通过结合贪心快速扩展随机树 (GRRT) 进行全局路径寻找，并利用动态窗口算法 (DWA) 实现局部避障与平滑行驶。
-                    </p>
-                </div>
-                <div>
-                    <div class="flex flex-wrap gap-2 mb-8">
-                        <span class="px-3 py-1 bg-white rounded-full text-xs font-medium border border-gray-100">Matlab</span>
-                        <span class="px-3 py-1 bg-white rounded-full text-xs font-medium border border-gray-100">GRRT</span>
-                        <span class="px-3 py-1 bg-white rounded-full text-xs font-medium border border-gray-100">DWA</span>
-                    </div>
-                    <div class="h-[1px] bg-gray-100 w-full mb-6"></div>
-                    <button class="text-blue-600 font-semibold text-sm hover:underline">查看详情 (Coming Soon)</button>
-                </div>
-            </div>
-
-            <div class="project-card p-10 flex flex-col justify-between min-h-[450px]">
-                <div>
-                    <div class="flex items-center gap-2 mb-6">
-                        <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Control Theory</span>
-                    </div>
-                    <h2 class="text-3xl font-bold mb-4 leading-tight">Membrane Separation<br>ADRC Control</h2>
-                    <p class="text-gray-500 mb-8 leading-relaxed">
-                        利用自抗扰控制 (ADRC) 算法替代传统 PID 控制器，显著提升了膜分离系统在复杂扰动下的稳定性和响应速度。在 Simulink 环境下完成了全系统建模。
-                    </p>
-                </div>
-                <div>
-                    <div class="flex flex-wrap gap-2 mb-8">
-                        <span class="px-3 py-1 bg-white rounded-full text-xs font-medium border border-gray-100">Simulink</span>
-                        <span class="px-3 py-1 bg-white rounded-full text-xs font-medium border border-gray-100">ADRC</span>
-                        <span class="px-3 py-1 bg-white rounded-full text-xs font-medium border border-gray-100">PID Optimization</span>
-                    </div>
-                    <div class="h-[1px] bg-gray-100 w-full mb-6"></div>
-                    <button class="text-blue-600 font-semibold text-sm hover:underline">查看仿真数据</button>
-                </div>
-            </div>
-
-            <div class="md:col-span-2 project-card p-10 md:p-16 flex flex-col md:flex-row gap-12 items-center">
-                <div class="md:w-1/2">
-                    <div class="flex items-center gap-2 mb-6">
-                        <span class="w-2 h-2 rounded-full bg-orange-500"></span>
-                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Data Science</span>
-                    </div>
-                    <h2 class="text-4xl font-bold mb-6">Wordle Puzzle<br>Difficulty Prediction</h2>
-                    <p class="text-gray-500 text-lg leading-relaxed mb-8">
-                        基于 GA-SVR 模型和模糊聚类分析，对单词难度进行量化分类。利用 LSTM 神经网络处理 Twitter 玩家大数据，精准预测每日得分趋势及困难模式参与比例。
-                    </p>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-4 py-1.5 bg-white rounded-full text-xs font-bold border border-gray-100">Python</span>
-                        <span class="px-4 py-1.5 bg-white rounded-full text-xs font-bold border border-gray-100">LSTM</span>
-                        <span class="px-4 py-1.5 bg-white rounded-full text-xs font-bold border border-gray-100">GA-SVR</span>
-                    </div>
-                </div>
-                <div class="md:w-1/2 w-full aspect-video bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl flex items-center justify-center border border-gray-100">
-                    <span class="text-6xl text-gray-200 font-bold">Visualization</span>
-                </div>
-            </div>
-
         </div>
     </main>
 
