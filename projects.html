@@ -9,7 +9,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: #F5F5F7; /* 统一使用 Apple 浅灰底色 */
+            background-color: #F5F5F7;
             color: #1D1D1F;
             -webkit-font-smoothing: antialiased;
         }
@@ -44,11 +44,16 @@
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="index.html" class="flex items-center text-gray-500 hover:text-gray-900 transition-colors font-medium text-sm">
                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                返回首页
+                <span class="lang-zh">返回首页</span><span class="lang-en hidden">Home</span>
             </a>
-            <div class="space-x-8 text-[12px] font-bold tracking-widest uppercase text-gray-400">
-                <a href="about.html" class="hover:text-blue-600 transition-colors">About Me</a>
-                <a href="publications.html" class="hover:text-blue-600 transition-colors">Research</a>
+            <div class="flex items-center gap-4">
+                <button id="lang-toggle" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 text-[11px] font-bold text-gray-600 transition-colors">
+                    EN
+                </button>
+                <div class="space-x-8 text-[12px] font-bold tracking-widest uppercase text-gray-400 hidden sm:block">
+                    <a href="about.html" class="hover:text-blue-600 transition-colors">About Me</a>
+                    <a href="publications.html" class="hover:text-blue-600 transition-colors">Research</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -57,10 +62,14 @@
         
         <header class="mb-16 text-center animate-in fade-in slide-in-from-bottom-4 duration-1000">
             <h2 class="text-sm font-bold tracking-widest uppercase text-blue-500 mb-4">Engineering Portfolio</h2>
-            <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-6">开源项目与<span class="gradient-text">仿真实验</span></h1>
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-6">
+                <span class="lang-zh">开源项目与<span class="gradient-text">仿真实验</span></span>
+                <span class="lang-en hidden">Open Source & <span class="gradient-text">Simulations</span></span>
+            </h1>
             <p class="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
                 "Hardware is hard, but simulation makes it possible." <br>
-                从底层阻抗控制到顶层具身智能的开源探索之路。
+                <span class="lang-zh">从底层阻抗控制到顶层具身智能的开源探索之路。</span>
+                <span class="lang-en hidden">An open-source exploration from low-level impedance control to high-level embodied AI.</span>
             </p>
         </header>
 
@@ -74,7 +83,8 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-4 text-gray-900 leading-tight">6-DOF Manipulator Impedance Control</h3>
                     <p class="text-sm text-gray-500 mb-6 leading-relaxed">
-                        基于 ROS 与 Gazebo 构建 6 自由度机械臂的物理仿真系统。实现基于运动学逆解的笛卡尔空间轨迹精确跟踪，并自研阻抗控制（Impedance Control）算法框架，实现机械臂末端与未知环境的柔顺接触与力控交互。
+                        <span class="lang-zh">基于 ROS 与 Gazebo 构建 6 自由度机械臂的物理仿真系统。实现基于运动学逆解的笛卡尔空间轨迹精确跟踪，并自研阻抗控制（Impedance Control）算法框架，实现机械臂末端与未知环境的柔顺接触与力控交互。</span>
+                        <span class="lang-en hidden">Built a physical simulation system for a 6-DOF robotic arm based on ROS and Gazebo. Implemented precise Cartesian trajectory tracking based on inverse kinematics, and developed a custom Impedance Control algorithm framework to achieve compliant contact and force-controlled interaction between the end-effector and unknown environments.</span>
                     </p>
                 </div>
                 <div>
@@ -98,7 +108,8 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-4 text-gray-900 leading-tight">Vision-Guided Autonomous Bin Picking</h3>
                     <p class="text-sm text-gray-500 mb-6 leading-relaxed">
-                        结合 RGB-D 深度相机实现的工业级无序抓取仿真系统。利用 PCL 处理点云数据进行目标位姿估计，并深度定制 MoveIt2 的规划管线，通过 RRT* 算法实现复杂动态障碍物环境下的无碰撞运动规划。
+                        <span class="lang-zh">结合 RGB-D 深度相机实现的工业级无序抓取仿真系统。利用 PCL 处理点云数据进行目标位姿估计，并深度定制 MoveIt2 的规划管线，通过 RRT* 算法实现复杂动态障碍物环境下的无碰撞运动规划。</span>
+                        <span class="lang-en hidden">An industrial-grade bin-picking simulation system integrated with RGB-D depth cameras. Utilized PCL to process point cloud data for target pose estimation, and deeply customized the MoveIt2 planning pipeline to achieve collision-free motion planning in complex dynamic obstacle environments using the RRT* algorithm.</span>
                     </p>
                 </div>
                 <div>
@@ -109,7 +120,8 @@
                         <span class="px-3 py-1 bg-gray-50 text-gray-600 rounded-lg text-[11px] font-semibold border border-gray-100">Computer Vision</span>
                     </div>
                     <span class="text-sm font-medium text-gray-400 flex items-center gap-1">
-                        架构设计中 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="lang-zh">架构设计中</span><span class="lang-en hidden">Architecture Design in Progress</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </span>
                 </div>
             </div>
@@ -123,7 +135,8 @@
                     </div>
                     <h3 class="text-3xl font-bold mb-4 text-gray-900 leading-tight">Sim2Real: RL-based Robotic Arm Manipulation</h3>
                     <p class="text-sm text-gray-500 mb-6 leading-relaxed">
-                        探索具身智能的前沿落地。计划在 NVIDIA Isaac Sim 中搭建支持 GPU 加速的高度逼真强化学习环境，使用 PyTorch 训练 PPO 算法，让机械臂自主学习复杂的抓取、堆叠等非结构化任务，攻克 Sim2Real 域间隙难题。
+                        <span class="lang-zh">探索具身智能的前沿落地。计划在 NVIDIA Isaac Sim 中搭建支持 GPU 加速的高度逼真强化学习环境，使用 PyTorch 训练 PPO 算法，让机械臂自主学习复杂的抓取、堆叠等非结构化任务，攻克 Sim2Real 域间隙难题。</span>
+                        <span class="lang-en hidden">Exploring the frontier deployment of Embodied AI. Planning to build a highly realistic, GPU-accelerated reinforcement learning environment in NVIDIA Isaac Sim. Will train the PPO algorithm using PyTorch to enable the robotic arm to autonomously learn complex unstructured tasks like grasping and stacking, tackling the Sim2Real domain gap challenge.</span>
                     </p>
                     <div class="flex flex-wrap gap-2 mb-6">
                         <span class="px-3 py-1 bg-rose-50 text-rose-600 rounded-lg text-[11px] font-bold border border-rose-100">Isaac Sim</span>
@@ -151,5 +164,34 @@
         &copy; 2026 Tingyu CHEN. Built with Apple Design Standards.
     </footer>
 
+    <script>
+        const langToggleBtn = document.getElementById('lang-toggle');
+        const langZhElements = document.querySelectorAll('.lang-zh');
+        const langEnElements = document.querySelectorAll('.lang-en');
+        
+        let currentLang = localStorage.getItem('preferred-lang') || 'zh';
+
+        function applyLanguage(lang) {
+            if (lang === 'en') {
+                langZhElements.forEach(el => el.classList.add('hidden'));
+                langEnElements.forEach(el => el.classList.remove('hidden'));
+                langToggleBtn.innerText = '中';
+            } else {
+                langZhElements.forEach(el => el.classList.remove('hidden'));
+                langEnElements.forEach(el => el.classList.add('hidden'));
+                langToggleBtn.innerText = 'EN';
+            }
+            localStorage.setItem('preferred-lang', lang);
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+        }
+
+        langToggleBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            applyLanguage(currentLang);
+        });
+
+        // 页面加载时自动应用语言偏好
+        applyLanguage(currentLang);
+    </script>
 </body>
 </html>
