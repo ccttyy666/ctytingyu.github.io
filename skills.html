@@ -43,21 +43,27 @@
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="index.html" class="flex items-center text-gray-500 hover:text-black transition-colors font-medium text-sm shrink-0">
                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                返回主页
+                <span class="lang-zh">返回主页</span><span class="lang-en hidden">Home</span>
             </a>
             
             <div class="flex items-center gap-4 md:gap-6">
                 <span class="text-[12px] font-bold tracking-widest uppercase text-gray-400 hidden md:inline-block">Tech Stack</span>
                 
                 <div class="flex items-center gap-2">
+                    <button id="lang-toggle" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 text-[11px] font-bold text-gray-600 transition-colors mr-2">
+                        EN
+                    </button>
+
                     <a href="https://www.zhihu.com/column/c_2029425573626228845" target="_blank" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#0066FF]/10 text-[#0066FF] hover:bg-[#0066FF]/20 transition-colors text-xs font-bold border border-[#0066FF]/20 whitespace-nowrap">
                         <span class="text-base leading-none hidden sm:inline-block">📘</span> 
-                        机器人<span class="hidden sm:inline">学习</span>
+                        <span class="lang-zh">机器人<span class="hidden sm:inline">学习</span></span>
+                        <span class="lang-en hidden">Robotics</span>
                     </a>
                     
                     <a href="https://www.zhihu.com/column/c_2029692524105594223" target="_blank" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#0066FF]/10 text-[#0066FF] hover:bg-[#0066FF]/20 transition-colors text-xs font-bold border border-[#0066FF]/20 whitespace-nowrap">
                         <span class="text-base leading-none hidden sm:inline-block">📙</span> 
-                        现代控制
+                        <span class="lang-zh">现代控制</span>
+                        <span class="lang-en hidden">Control</span>
                     </a>
                 </div>
             </div>
@@ -67,8 +73,14 @@
     <main class="max-w-6xl mx-auto px-6 pt-32 pb-20">
         <header class="mb-20 text-center">
             <h2 class="text-sm font-bold tracking-widest uppercase text-gray-400 mb-4">My Arsenal</h2>
-            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6">梦想成为<br><span class="gradient-text">全栈机器人工程师</span></h1>
-            <p class="text-xl text-gray-500 max-w-2xl mx-auto">从底层硬件仿真、控制算法推导，到高层机器学习与强化学习的实现，打通机器人工程的完整技术链路。</p>
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6">
+                <span class="lang-zh">梦想成为<br><span class="gradient-text">全栈机器人工程师</span></span>
+                <span class="lang-en hidden">Aspiring<br><span class="gradient-text">Full-Stack Robotics Engineer</span></span>
+            </h1>
+            <p class="text-xl text-gray-500 max-w-2xl mx-auto">
+                <span class="lang-zh">从底层硬件仿真、控制算法推导，到高层机器学习与强化学习的实现，打通机器人工程的完整技术链路。</span>
+                <span class="lang-en hidden">Bridging the gap from low-level hardware simulation and control algorithm derivation to high-level machine learning and reinforcement learning implementation.</span>
+            </p>
         </header>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -99,11 +111,16 @@
                     🗺️
                 </div>
                 <h3 class="text-lg font-bold mb-6">Motion Planning</h3>
-                <p class="text-sm text-gray-500 mb-6 leading-relaxed">专注于机器人的全局与局部路径规划算法，能够在复杂动态环境中实现高效、安全的轨迹生成与避障。</p>
+                <p class="text-sm text-gray-500 mb-6 leading-relaxed">
+                    <span class="lang-zh">专注于机器人的全局与局部路径规划算法，能够在复杂动态环境中实现高效、安全的轨迹生成与避障。</span>
+                    <span class="lang-en hidden">Focusing on global and local path planning algorithms for robots, capable of generating efficient and collision-free trajectories in complex dynamic environments.</span>
+                </p>
                 <div class="flex flex-wrap gap-2">
                     <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">A* / Dijkstra</span>
                     <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">RRT</span>
-                    <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">样条曲线 (Spline)</span>
+                    <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">
+                        <span class="lang-zh">样条曲线 (Spline)</span><span class="lang-en hidden">Spline Curve</span>
+                    </span>
                     <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">DWA</span>
                     <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">APF</span>
                     <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">TEB</span>
@@ -115,7 +132,10 @@
                     🎛️
                 </div>
                 <h3 class="text-lg font-bold mb-6">Modern Control Theory</h3>
-                <p class="text-sm text-gray-500 mb-6 leading-relaxed">深入研究现代控制理论与非线性控制，致力于实现高精度、高鲁棒性的机器人底层运动学与动力学控制。</p>
+                <p class="text-sm text-gray-500 mb-6 leading-relaxed">
+                    <span class="lang-zh">深入研究现代控制理论与非线性控制，致力于实现高精度、高鲁棒性的机器人底层运动学与动力学控制。</span>
+                    <span class="lang-en hidden">Deeply exploring modern control theory and nonlinear control, dedicated to achieving high-precision, highly robust underlying kinematics and dynamics control of robots.</span>
+                </p>
                 <div class="flex flex-wrap gap-2">
                     <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">PID</span>
                     <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">LQR</span>
@@ -130,18 +150,32 @@
                     🤖
                 </div>
                 <h3 class="text-lg font-bold mb-6">Robotics & Kinematics</h3>
-                <p class="text-sm text-gray-500 mb-6 leading-relaxed">具备极其扎实的机器人学理论基础，熟练掌握空间几何变换、机械臂运动学求解及基于 ROS 生态的系统开发。</p>
+                <p class="text-sm text-gray-500 mb-6 leading-relaxed">
+                    <span class="lang-zh">具备极其扎实的机器人学理论基础，熟练掌握空间几何变换、机械臂运动学求解及基于 ROS 生态的系统开发。</span>
+                    <span class="lang-en hidden">Possessing a solid theoretical foundation in robotics, proficient in spatial geometric transformations, kinematics solving, and ROS-based system development.</span>
+                </p>
                 <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">坐标变换</span>
-                    <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">李群李代数</span>
-                    <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">正逆运动学</span>
-                    <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">最优化理论</span>
-                    <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">零空间控制</span>
-                    <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">力控 / 阻抗导纳</span>
-                    <span class="px-3 py-1.5 bg-gray-50 text-blue-600 rounded-lg text-xs font-bold border border-blue-100">ROS / ROS2</span>
+                    <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">
+                        <span class="lang-zh">坐标变换</span><span class="lang-en hidden">Transformations</span>
+                    </span>
+                    <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">
+                        <span class="lang-zh">李群李代数</span><span class="lang-en hidden">Lie Groups & Algebras</span>
+                    </span>
+                    <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">
+                        <span class="lang-zh">正逆运动学</span><span class="lang-en hidden">Forward/Inverse Kinematics</span>
+                    </span>
+                    <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">
+                        <span class="lang-zh">最优化理论</span><span class="lang-en hidden">Optimization</span>
+                    </span>
+                    <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">
+                        <span class="lang-zh">零空间控制</span><span class="lang-en hidden">Null-space Control</span>
+                    </span>
+                    <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold border border-gray-100">
+                        <span class="lang-zh">力控 / 阻抗导纳</span><span class="lang-en hidden">Force/Impedance Control</span>
+                    </span>
+                    <span class="px-3 py-1.5 bg-blue-50 text-blue-600 rounded-lg text-xs font-bold border border-blue-100">ROS / ROS2</span>
                 </div>
             </div>
-
 
             <div class="skill-card p-8 relative border-2 border-dashed border-gray-200 bg-gray-50/30 group cursor-default">
                 <div class="absolute top-6 right-6 px-2.5 py-1 bg-gray-200 text-gray-500 text-[10px] font-bold rounded-md uppercase tracking-widest z-10 transition-colors group-hover:bg-teal-100 group-hover:text-teal-600">
@@ -154,7 +188,8 @@
                     </div>
                     <h3 class="text-lg font-bold mb-6 text-gray-700">Perception & Mapping</h3>
                     <p class="text-sm text-gray-500 mb-6 leading-relaxed">
-                        【路线图】计划补齐环境感知与空间认知能力。目标处理多模态传感器数据，并在未知复杂环境中实现同步定位与建图 (SLAM)。
+                        <span class="lang-zh">【路线图】计划补齐环境感知与空间认知能力。目标处理多模态传感器数据，并在未知复杂环境中实现同步定位与建图 (SLAM)。</span>
+                        <span class="lang-en hidden">[Roadmap] Planning to build environmental perception capabilities. Aiming to process multi-modal sensor data and achieve Simultaneous Localization and Mapping (SLAM).</span>
                     </p>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1.5 bg-white text-gray-400 rounded-lg text-xs font-semibold border border-gray-100">SLAM (Lidar/Visual)</span>
@@ -176,7 +211,8 @@
                     </div>
                     <h3 class="text-lg font-bold mb-6 text-gray-700">Embodied AI & RL</h3>
                     <p class="text-sm text-gray-500 mb-6 leading-relaxed">
-                        【未来探索】计划深入强化学习与模仿学习在医疗及服务机器人中的泛化应用，尝试攻克 Sim2Real 仿真到现实的落地瓶颈。
+                        <span class="lang-zh">【未来探索】计划深入强化学习与模仿学习在医疗及服务机器人中的泛化应用，尝试攻克 Sim2Real 仿真到现实的落地瓶颈。</span>
+                        <span class="lang-en hidden">[Future Exploration] Planning to dive into the generalized application of RL and Imitation Learning in medical robots, attempting to overcome the Sim2Real deployment bottleneck.</span>
                     </p>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1.5 bg-white text-gray-400 rounded-lg text-xs font-semibold border border-gray-100">Reinforcement Learning</span>
@@ -189,5 +225,36 @@
         </div>
     </main>
 
+    <script>
+        // 无缝双语切换引擎 (与首页逻辑完全一致)
+        const langToggleBtn = document.getElementById('lang-toggle');
+        const langZhElements = document.querySelectorAll('.lang-zh');
+        const langEnElements = document.querySelectorAll('.lang-en');
+        
+        // 读取浏览器本地存储语言偏好
+        let currentLang = localStorage.getItem('preferred-lang') || 'zh';
+
+        function applyLanguage(lang) {
+            if (lang === 'en') {
+                langZhElements.forEach(el => el.classList.add('hidden'));
+                langEnElements.forEach(el => el.classList.remove('hidden'));
+                langToggleBtn.innerText = '中';
+            } else {
+                langZhElements.forEach(el => el.classList.remove('hidden'));
+                langEnElements.forEach(el => el.classList.add('hidden'));
+                langToggleBtn.innerText = 'EN';
+            }
+            localStorage.setItem('preferred-lang', lang);
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+        }
+
+        langToggleBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            applyLanguage(currentLang);
+        });
+
+        // 初始化
+        applyLanguage(currentLang);
+    </script>
 </body>
 </html>
