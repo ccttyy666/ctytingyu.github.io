@@ -9,7 +9,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: #F5F5F7; /* Apple 浅灰底色 */
+            background-color: #F5F5F7;
             color: #1D1D1F;
             -webkit-font-smoothing: antialiased;
         }
@@ -39,6 +39,10 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
@@ -47,10 +51,15 @@
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="index.html" class="flex items-center text-gray-500 hover:text-gray-900 transition-colors font-medium">
                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                返回
+                <span class="lang-zh">返回首页</span><span class="lang-en hidden">Home</span>
             </a>
-            <div class="space-x-8 text-sm font-medium opacity-80">
-                <a href="publications.html" class="hover:text-blue-600 transition-colors">科研</a>
+            <div class="flex items-center space-x-6 text-sm font-medium opacity-80">
+                <button id="lang-toggle" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 text-[11px] font-bold text-gray-600 transition-colors">
+                    EN
+                </button>
+                <a href="publications.html" class="hover:text-blue-600 transition-colors">
+                    <span class="lang-zh">科研成果</span><span class="lang-en hidden">Research</span>
+                </a>
             </div>
         </div>
     </nav>
@@ -67,30 +76,37 @@
                 <div class="w-12 h-1 bg-blue-500 mx-auto mt-4 rounded-full opacity-20"></div>
             </div>
         </header>
-        
-        <style>
-            @keyframes fadeIn {
-                from { opacity: 0; transform: translateY(10px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
-        </style>
 
         <div class="grid grid-cols-1 md:grid-cols-6 gap-6">
             
             <div class="md:col-span-4 bento-card min-h-[400px]">
-                <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-8">教育与成长</h3>
+                <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-8">
+                    <span class="lang-zh">教育与成长</span><span class="lang-en hidden">Education & Growth</span>
+                </h3>
                 <div class="relative pl-8 border-l-2 border-blue-50 space-y-12">
                     <div>
                         <span class="absolute -left-[9px] w-4 h-4 bg-blue-500 rounded-full border-4 border-white"></span>
-                        <p class="text-sm font-bold text-blue-600">2024 - 至今</p>
-                        <h4 class="text-xl font-bold">米兰理工大学 · 硕士</h4>
-                        <p class="text-gray-500 mt-2 leading-relaxed">自动化与控制理论。在这里，我不仅钻研医疗机器人的强化学习，也在体验意大利特有的设计美学与咖啡文化。</p>
+                        <p class="text-sm font-bold text-blue-600">
+                            <span class="lang-zh">2024 - 至今</span><span class="lang-en hidden">2024 - Present</span>
+                        </p>
+                        <h4 class="text-xl font-bold">
+                            <span class="lang-zh">米兰理工大学 · 硕士</span><span class="lang-en hidden">Politecnico di Milano · MSc</span>
+                        </h4>
+                        <p class="text-gray-500 mt-2 leading-relaxed">
+                            <span class="lang-zh">自动化与控制理论。在这里，我不仅钻研医疗机器人的强化学习，也在体验意大利特有的设计美学与咖啡文化。</span>
+                            <span class="lang-en hidden">Automation and Control Engineering. Here, I not only delve into reinforcement learning for medical robotics but also experience Italy's unique design aesthetics and coffee culture.</span>
+                        </p>
                     </div>
                     <div>
                         <span class="absolute -left-[9px] w-4 h-4 bg-gray-300 rounded-full border-4 border-white"></span>
                         <p class="text-sm font-bold text-gray-400">2020 - 2024</p>
-                        <h4 class="text-xl font-bold">华南理工大学 · 学士</h4>
-                        <p class="text-gray-500 mt-2">机器人工程专业。完成了从机械设计、计算机编程、电子电路到控制算法的知识架构搭建，获得国家级大创项目认可。</p>
+                        <h4 class="text-xl font-bold">
+                            <span class="lang-zh">华南理工大学 · 学士</span><span class="lang-en hidden">South China Univ. of Technology · BSc</span>
+                        </h4>
+                        <p class="text-gray-500 mt-2">
+                            <span class="lang-zh">机器人工程专业。完成了从机械设计、计算机编程、电子电路到控制算法的知识架构搭建，获得国家级大创项目认可。</span>
+                            <span class="lang-en hidden">Robotics Engineering. Built a comprehensive knowledge architecture ranging from mechanical design, programming, and electronic circuits to control algorithms. Recognized by the National Innovation Training Program.</span>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -107,22 +123,35 @@
                 <div class="space-y-6">
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 shrink-0 rounded-full bg-blue-50 flex items-center justify-center text-xl shadow-sm border border-blue-100/50">🏸</div>
-                        <div class="flex-1 min-w-0"> <h4 class="font-bold text-sm text-gray-800">竞技运动</h4>
-                            <p class="text-xs text-gray-500 mt-1 leading-tight truncate">羽毛球区运第六 / 篮球</p>
+                        <div class="flex-1 min-w-0"> 
+                            <h4 class="font-bold text-sm text-gray-800">
+                                <span class="lang-zh">竞技运动</span><span class="lang-en hidden">Sports</span>
+                            </h4>
+                            <p class="text-xs text-gray-500 mt-1 leading-tight truncate">
+                                <span class="lang-zh">羽毛球区运第六 / 篮球</span><span class="lang-en hidden">Badminton (Top 6) / Basketball</span>
+                            </p>
                         </div>
                     </div>
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 shrink-0 rounded-full bg-purple-50 flex items-center justify-center text-xl shadow-sm border border-purple-100/50">🎸</div>
                         <div class="flex-1 min-w-0">
-                            <h4 class="font-bold text-sm text-gray-800">乐器与古典乐</h4>
-                            <p class="text-xs text-gray-500 mt-1 leading-tight truncate">电子琴、吉他与古典浪漫</p>
+                            <h4 class="font-bold text-sm text-gray-800">
+                                <span class="lang-zh">乐器与古典乐</span><span class="lang-en hidden">Music</span>
+                            </h4>
+                            <p class="text-xs text-gray-500 mt-1 leading-tight truncate">
+                                <span class="lang-zh">电子琴、吉他与古典浪漫</span><span class="lang-en hidden">Keyboard, Guitar & Classical</span>
+                            </p>
                         </div>
                     </div>
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 shrink-0 rounded-full bg-stone-50 flex items-center justify-center text-xl shadow-sm border border-stone-100/50">📷</div>
                         <div class="flex-1 min-w-0">
-                            <h4 class="font-bold text-sm text-gray-800">摄影 & 咖啡</h4>
-                            <p class="text-xs text-gray-500 mt-1 leading-tight truncate">捕捉几何美感，品鉴 Espresso</p>
+                            <h4 class="font-bold text-sm text-gray-800">
+                                <span class="lang-zh">摄影 & 咖啡</span><span class="lang-en hidden">Photography & Coffee</span>
+                            </h4>
+                            <p class="text-xs text-gray-500 mt-1 leading-tight truncate">
+                                <span class="lang-zh">捕捉几何美感，品鉴 Espresso</span><span class="lang-en hidden">Geometry aesthetics & Espresso</span>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -151,7 +180,7 @@
                         <p id="city-desc" class="text-gray-500 text-sm leading-relaxed mb-6 shrink-0">现在的居住地。在 Duomo 的光影下感受历史与现代设计的交织。</p>
                         
                         <div class="flex-1 w-full relative overflow-hidden rounded-2xl shadow-sm border border-black/5 bg-gray-100 min-h-[200px]">
-                            <img id="city-image" src="about/milan.jpg" alt="City View" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                            <img id="city-image" src="about/travel/milan.jpg" alt="City View" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105">
                         </div>
                         
                     </div>
@@ -164,50 +193,59 @@
             </div>
             
             <script>
+                // 旅行数据由于嵌入在JS中，我们同时提供中英文版本
                 const cityData = {
                     milan: { 
-                        name: '米兰', 
-                        desc: '现在的居住地。在 Duomo 的光影下感受历史与现代设计的交织。', 
-                        tags: ['设计之都', '意式生活'], 
+                        name: { zh: '米兰', en: 'Milan' }, 
+                        desc: { zh: '现在的居住地。在 Duomo 的光影下感受历史与现代设计的交织。', en: 'Current residence. Feeling the interweaving of history and modern design under the light of the Duomo.' }, 
+                        tags: { zh: ['设计之都', '意式生活'], en: ['Design Capital', 'Italian Life'] }, 
                         color: 'from-blue-50', 
-                        img: 'about/milan.jpg' 
+                        img: 'about/travel/milan.jpg' 
                     },
                     zurich: { 
-                        name: '苏黎世', 
-                        desc: '在苏黎世湖畔思考算法，感受瑞士极致的精准与自然的宁静。', 
-                        tags: ['金融中心', '湖光山色'], 
+                        name: { zh: '苏黎世', en: 'Zurich' }, 
+                        desc: { zh: '在苏黎世湖畔思考算法，感受瑞士极致的精准与自然的宁静。', en: 'Thinking about algorithms by Lake Zurich, feeling the ultimate precision of Switzerland and the tranquility of nature.' }, 
+                        tags: { zh: ['金融中心', '湖光山色'], en: ['Financial Hub', 'Lake & Mountains'] }, 
                         color: 'from-gray-100', 
-                        img: 'about/zurich.jpg' 
+                        img: 'about/travel/zurich.jpg' 
                     },
                     paris: { 
-                        name: '巴黎', 
-                        desc: '漫步在塞纳河畔，寻找建筑美学与控制论之间的灵感碰撞。', 
-                        tags: ['艺术殿堂', '浪漫建筑'], 
+                        name: { zh: '巴黎', en: 'Paris' }, 
+                        desc: { zh: '漫步在塞纳河畔，寻找建筑美学与控制论之间的灵感碰撞。', en: 'Strolling along the Seine, looking for the collision of inspiration between architectural aesthetics and cybernetics.' }, 
+                        tags: { zh: ['艺术殿堂', '浪漫建筑'], en: ['Art Palace', 'Romantic Arch.'] }, 
                         color: 'from-rose-50', 
-                        img: 'about/paris.jpg' 
+                        img: 'about/travel/paris.jpg' 
                     },
                     guangzhou: { 
-                        name: '广州', 
-                        desc: '我的家乡。烟火气与科技创新的融合，我机器人梦开始的地方。', 
-                        tags: ['岭南文化', '美食之都'], 
+                        name: { zh: '广州', en: 'Guangzhou' }, 
+                        desc: { zh: '我的家乡。烟火气与科技创新的融合，我机器人梦开始的地方。', en: 'My hometown. The fusion of worldly atmosphere and technological innovation, where my robot dream began.' }, 
+                        tags: { zh: ['岭南文化', '美食之都'], en: ['Lingnan Culture', 'Food Capital'] }, 
                         color: 'from-orange-50', 
-                        img: 'about/guangzhou.jpg' 
+                        img: 'about/travel/guangzhou.jpg' 
                     }
                 };
             
+                let activeCityKey = 'milan'; // 记住当前激活的城市，方便切换语言时刷新内容
+
                 function switchCity(key) {
-                    const data = cityData[key];
+                    activeCityKey = key;
+                    updateCityDisplay();
+                }
+
+                function updateCityDisplay() {
+                    const data = cityData[activeCityKey];
                     const stage = document.getElementById('city-stage');
                     const content = document.getElementById('city-content');
+                    const lang = document.documentElement.lang === 'zh-CN' ? 'zh' : 'en'; // 获取当前语言
                     
                     content.style.opacity = '0';
                     content.style.transform = 'translateY(10px)';
                     
                     setTimeout(() => {
-                        document.getElementById('city-name').innerText = data.name;
-                        document.getElementById('city-desc').innerText = data.desc;
-                        document.getElementById('tag-1').innerText = data.tags[0];
-                        document.getElementById('tag-2').innerText = data.tags[1];
+                        document.getElementById('city-name').innerText = data.name[lang];
+                        document.getElementById('city-desc').innerText = data.desc[lang];
+                        document.getElementById('tag-1').innerText = data.tags[lang][0];
+                        document.getElementById('tag-2').innerText = data.tags[lang][1];
                         document.getElementById('city-image').src = data.img;
                         
                         stage.className = `w-full md:w-3/5 p-8 flex flex-col justify-between bg-gradient-to-br ${data.color} to-white transition-all duration-500`;
@@ -220,9 +258,13 @@
                         btn.classList.remove('bg-gray-900', 'text-white', 'active-city');
                         btn.classList.add('text-gray-400');
                     });
-                    const activeBtn = event.currentTarget;
-                    activeBtn.classList.remove('text-gray-400');
-                    activeBtn.classList.add('bg-gray-900', 'text-white', 'active-city');
+                    
+                    // 找到对应的按钮并高亮
+                    const activeBtn = document.querySelector(`button[onclick="switchCity('${activeCityKey}')"]`);
+                    if(activeBtn){
+                        activeBtn.classList.remove('text-gray-400');
+                        activeBtn.classList.add('bg-gray-900', 'text-white', 'active-city');
+                    }
                 }
                 
                 // 初始化
@@ -238,9 +280,13 @@
                         </div>
                     </div>
                     
-                    <h4 class="text-4xl font-bold mb-6 tracking-tight leading-tight">不设限的<br>社会影响力</h4>
+                    <h4 class="text-4xl font-bold mb-6 tracking-tight leading-tight">
+                        <span class="lang-zh">不设限的<br>社会影响力</span>
+                        <span class="lang-en hidden">Boundless<br>Social Impact</span>
+                    </h4>
                     <p class="text-indigo-50/90 text-sm leading-relaxed mb-6 max-w-sm">
-                        走出实验室，我享受跨界带来的碰撞。我是 Solarsail Super Computer 的联合创始人、学术期刊审稿人、百万播放的自媒体创作者，也是一位坚持长期支教的志愿者。
+                        <span class="lang-zh">走出实验室，我享受跨界带来的碰撞。我是 Solarsail Super Computer 的联合创始人、学术期刊审稿人、百万播放的自媒体创作者，也是一位坚持长期支教的志愿者。</span>
+                        <span class="lang-en hidden">Stepping out of the lab, I enjoy the collision of interdisciplinary ideas. I am the co-founder of Solarsail Super Computer, an academic journal reviewer, a content creator with millions of views, and a dedicated long-term volunteer teacher.</span>
                     </p>
                 </div>
                 
@@ -258,5 +304,39 @@
         &copy; 2026 Tingyu CHEN. Living & Learning in Milan.
     </footer>
 
+    <script>
+        const langToggleBtn = document.getElementById('lang-toggle');
+        const langZhElements = document.querySelectorAll('.lang-zh');
+        const langEnElements = document.querySelectorAll('.lang-en');
+        
+        let currentLang = localStorage.getItem('preferred-lang') || 'zh';
+
+        function applyLanguage(lang) {
+            if (lang === 'en') {
+                langZhElements.forEach(el => el.classList.add('hidden'));
+                langEnElements.forEach(el => el.classList.remove('hidden'));
+                langToggleBtn.innerText = '中';
+            } else {
+                langZhElements.forEach(el => el.classList.remove('hidden'));
+                langEnElements.forEach(el => el.classList.add('hidden'));
+                langToggleBtn.innerText = 'EN';
+            }
+            localStorage.setItem('preferred-lang', lang);
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+            
+            // 特殊处理：刷新旅行卡片的JS内容
+            if(typeof updateCityDisplay === 'function') {
+                updateCityDisplay();
+            }
+        }
+
+        langToggleBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            applyLanguage(currentLang);
+        });
+
+        // 页面加载时自动应用语言偏好
+        applyLanguage(currentLang);
+    </script>
 </body>
 </html>
