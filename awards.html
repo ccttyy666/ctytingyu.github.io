@@ -44,17 +44,29 @@
         <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="index.html" class="flex items-center text-gray-500 hover:text-black transition-colors font-medium text-sm">
                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                返回主页
+                <span class="lang-zh">返回主页</span><span class="lang-en hidden">Home</span>
             </a>
-            <span class="text-[12px] font-bold tracking-widest uppercase text-gray-400">Milestones</span>
+            
+            <div class="flex items-center gap-4">
+                <button id="lang-toggle" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 text-[11px] font-bold text-gray-600 transition-colors">
+                    EN
+                </button>
+                <span class="text-[12px] font-bold tracking-widest uppercase text-gray-400">Milestones</span>
+            </div>
         </div>
     </nav>
 
     <main class="max-w-5xl mx-auto px-6 pt-32 pb-20">
         <header class="mb-16">
             <h2 class="text-sm font-bold tracking-widest uppercase text-amber-500 mb-4">Milestones & Recognition</h2>
-            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">高光时刻与<span class="gradient-text">奖项认可</span></h1>
-            <p class="text-lg text-gray-500 max-w-2xl leading-relaxed">从数学理论的深度推演，到微纳硬件的创新设计，再到跨文化的专业表达。每一次竞赛都是突破能力边界的绝佳实践。</p>
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+                <span class="lang-zh">高光时刻与<span class="gradient-text">奖项认可</span></span>
+                <span class="lang-en hidden">Highlights & <span class="gradient-text">Awards</span></span>
+            </h1>
+            <p class="text-lg text-gray-500 max-w-2xl leading-relaxed">
+                <span class="lang-zh">从数学理论的深度推演，到微纳硬件的创新设计，再到跨文化的专业表达。每一次竞赛都是突破能力边界的绝佳实践。</span>
+                <span class="lang-en hidden">From the deep deduction of mathematical theories to the innovative design of micro/nano hardware, and cross-cultural professional expression. Every competition is an excellent practice in pushing the boundaries of my capabilities.</span>
+            </p>
         </header>
 
         <div class="space-y-6">
@@ -65,17 +77,29 @@
                 </div>
                 <div class="flex-1">
                     <div class="flex flex-wrap items-center gap-3 mb-2">
-                        <h3 class="text-2xl font-bold text-gray-900">美国大学生数学建模竞赛 (MCM/ICM)</h3>
-                        <span class="px-3 py-1 bg-amber-100 text-amber-700 text-[11px] font-bold rounded-full tracking-wide">Honorable Prize / H奖</span>
+                        <h3 class="text-2xl font-bold text-gray-900">
+                            <span class="lang-zh">美国大学生数学建模竞赛 (MCM)</span>
+                            <span class="lang-en hidden">Mathematical Contest in Modeling (MCM)</span>
+                        </h3>
+                        <span class="px-3 py-1 bg-amber-100 text-amber-700 text-[11px] font-bold rounded-full tracking-wide">
+                            <span class="lang-zh">Honorable Prize / 一等奖</span><span class="lang-en hidden">Honorable Mention (1st Prize)</span>
+                        </span>
                     </div>
                     <p class="text-sm text-gray-400 font-medium mb-6">COMAP · Feb. 2023</p>
                     <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                        在为期 4 天的极限挑战中，针对复杂的现实问题构建数学模型。负责核心算法的推导与实现，利用优化算法和计算机仿真，提供了一套具有高鲁棒性的解决方案，并协助完成了全英文学术论文的撰写。
+                        <span class="lang-zh">在为期 4 天的极限挑战中，针对复杂的现实问题构建数学模型。负责核心算法的推导与实现，利用优化算法和计算机仿真，提供了一套具有高鲁棒性的解决方案，并协助完成了全英文学术论文的撰写。</span>
+                        <span class="lang-en hidden">In a 4-day extreme challenge, built mathematical models for complex real-world problems. Responsible for the derivation and implementation of core algorithms, provided a highly robust solution using optimization algorithms and computer simulations, and assisted in writing the full English academic paper.</span>
                     </p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">数学建模</span>
-                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">算法推导</span>
-                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">全英文学术写作</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">
+                            <span class="lang-zh">数学建模</span><span class="lang-en hidden">Math Modeling</span>
+                        </span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">
+                            <span class="lang-zh">算法推导</span><span class="lang-en hidden">Algorithm Derivation</span>
+                        </span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">
+                            <span class="lang-zh">全英文写作</span><span class="lang-en hidden">Academic English</span>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -86,16 +110,26 @@
                 </div>
                 <div class="flex-1">
                     <div class="flex flex-wrap items-center gap-3 mb-2">
-                        <h3 class="text-2xl font-bold text-gray-900">全国大学生数学竞赛 (CMC)</h3>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-700 text-[11px] font-bold rounded-full tracking-wide">Third Prize / 三等奖</span>
+                        <h3 class="text-2xl font-bold text-gray-900">
+                            <span class="lang-zh">全国大学生数学竞赛 (CMC)</span>
+                            <span class="lang-en hidden">Chinese Mathematics Competitions (CMC)</span>
+                        </h3>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 text-[11px] font-bold rounded-full tracking-wide">
+                            <span class="lang-zh">Third Prize / 三等奖</span><span class="lang-en hidden">Third Prize</span>
+                        </span>
                     </div>
                     <p class="text-sm text-gray-400 font-medium mb-6">Chinese Mathematical Society · Jan. 2023</p>
                     <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                        在全国最具影响力的基础学科竞赛中斩获奖项。展现了在高等数学与线性代数等核心数学领域的扎实功底，这为后续深研复杂的机器人运动学模型与现代控制理论打下了坚实的理论基础。
+                        <span class="lang-zh">在全国最具影响力的基础学科竞赛中斩获奖项。展现了在高等数学与线性代数等核心数学领域的扎实功底，这为后续深研复杂的机器人运动学模型与现代控制理论打下了坚实的理论基础。</span>
+                        <span class="lang-en hidden">Won an award in the most influential basic science competition in China. Demonstrated a solid foundation in core mathematical fields such as advanced mathematics and linear algebra, laying a strong theoretical basis for subsequent in-depth research on complex robot kinematics models and modern control theory.</span>
                     </p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">高等数学</span>
-                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">逻辑推演</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">
+                            <span class="lang-zh">高等数学</span><span class="lang-en hidden">Advanced Math</span>
+                        </span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">
+                            <span class="lang-zh">逻辑推演</span><span class="lang-en hidden">Logical Deduction</span>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -106,16 +140,26 @@
                 </div>
                 <div class="flex-1">
                     <div class="flex flex-wrap items-center gap-3 mb-2">
-                        <h3 class="text-2xl font-bold text-gray-900">亚太地区数学建模竞赛 (APMCM)</h3>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[11px] font-bold rounded-full tracking-wide">Second Prize / 二等奖</span>
+                        <h3 class="text-2xl font-bold text-gray-900">
+                            <span class="lang-zh">亚太地区数学建模竞赛 (APMCM)</span>
+                            <span class="lang-en hidden">Asia and Pacific Mathematical Contest in Modeling (APMCM)</span>
+                        </h3>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[11px] font-bold rounded-full tracking-wide">
+                            <span class="lang-zh">Second Prize / 二等奖</span><span class="lang-en hidden">Second Prize</span>
+                        </span>
                     </div>
                     <p class="text-sm text-gray-400 font-medium mb-6">APMCM Committee · Nov. 2022</p>
                     <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                        运用统计学、机器学习等数据驱动方法对复杂系统进行深入挖掘。在数据预处理、特征工程及模型评估环节发挥关键作用，有效提升了预测模型的准确率与泛化能力。
+                        <span class="lang-zh">运用统计学、机器学习等数据驱动方法对复杂系统进行深入挖掘。在数据预处理、特征工程及模型评估环节发挥关键作用，有效提升了预测模型的准确率与泛化能力。</span>
+                        <span class="lang-en hidden">Utilized data-driven methods such as statistics and machine learning to deeply mine complex systems. Played a key role in data preprocessing, feature engineering, and model evaluation, effectively improving the accuracy and generalization ability of predictive models.</span>
                     </p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">数据科学</span>
-                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">特征工程</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">
+                            <span class="lang-zh">数据科学</span><span class="lang-en hidden">Data Science</span>
+                        </span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">
+                            <span class="lang-zh">特征工程</span><span class="lang-en hidden">Feature Engineering</span>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -126,16 +170,26 @@
                 </div>
                 <div class="flex-1">
                     <div class="flex flex-wrap items-center gap-3 mb-2">
-                        <h3 class="text-2xl font-bold text-gray-900">"木棉杯" 翻译大赛</h3>
-                        <span class="px-3 py-1 bg-rose-100 text-rose-700 text-[11px] font-bold rounded-full tracking-wide">Second Prize / 二等奖</span>
+                        <h3 class="text-2xl font-bold text-gray-900">
+                            <span class="lang-zh">"木棉杯" 翻译大赛</span>
+                            <span class="lang-en hidden">"Kapok Cup" Translation Contest</span>
+                        </h3>
+                        <span class="px-3 py-1 bg-rose-100 text-rose-700 text-[11px] font-bold rounded-full tracking-wide">
+                            <span class="lang-zh">Second Prize / 二等奖</span><span class="lang-en hidden">Second Prize</span>
+                        </span>
                     </div>
                     <p class="text-sm text-gray-400 font-medium mb-6">Kapok Cup · Apr. 2022</p>
                     <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                        在理工科背景下，展现出卓越的双语转化能力。这使得我能够无障碍地阅读最前沿的英文科研文献（IEEE, IFAC等），并在国际学术交流与论文撰写中具备显著的语言优势。
+                        <span class="lang-zh">在理工科背景下，展现出卓越的双语转化能力。这使得我能够无障碍地阅读最前沿的英文科研文献（IEEE, IFAC等），并在国际学术交流与论文撰写中具备显著的语言优势。</span>
+                        <span class="lang-en hidden">Demonstrated excellent bilingual translation abilities within a STEM background. This enables me to read cutting-edge English research literature (IEEE, IFAC, etc.) without barriers and provides a significant language advantage in international academic communication and paper writing.</span>
                     </p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">跨文化交流</span>
-                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">专业英语表达</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">
+                            <span class="lang-zh">跨文化交流</span><span class="lang-en hidden">Cross-cultural Comm.</span>
+                        </span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">
+                            <span class="lang-zh">专业英语表达</span><span class="lang-en hidden">Professional English</span>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -146,17 +200,29 @@
                 </div>
                 <div class="flex-1">
                     <div class="flex flex-wrap items-center gap-3 mb-2">
-                        <h3 class="text-2xl font-bold text-gray-900">全国微纳传感器技术与智能应用大赛</h3>
-                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-[11px] font-bold rounded-full tracking-wide">初赛一等奖 / 决赛优秀奖</span>
+                        <h3 class="text-2xl font-bold text-gray-900">
+                            <span class="lang-zh">全国微纳传感器技术与智能应用大赛</span>
+                            <span class="lang-en hidden">National Micro/Nano Sensor Tech Competition</span>
+                        </h3>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-[11px] font-bold rounded-full tracking-wide">
+                            <span class="lang-zh">初赛一等奖 / 决赛优秀奖</span><span class="lang-en hidden">1st Prize (Prelim) / Excellence Award (Final)</span>
+                        </span>
                     </div>
                     <p class="text-sm text-gray-400 font-medium mb-6">Oct. 2021</p>
                     <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                        将控制理论与底层硬件紧密结合，参与微纳传感器的系统设计与智能应用开发。展示了从理论计算走向实际物理硬件落地的全链路工程能力，以及在硬件调试过程中的问题解决能力。
+                        <span class="lang-zh">将控制理论与底层硬件紧密结合，参与微纳传感器的系统设计与智能应用开发。展示了从理论计算走向实际物理硬件落地的全链路工程能力，以及在硬件调试过程中的问题解决能力。</span>
+                        <span class="lang-en hidden">Closely integrated control theory with underlying hardware, participating in the system design and intelligent application development of micro/nano sensors. Demonstrated full-stack engineering capabilities from theoretical calculation to actual physical hardware deployment, as well as problem-solving skills during hardware debugging.</span>
                     </p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">硬件开发</span>
-                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">传感器技术</span>
-                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">系统集成</span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">
+                            <span class="lang-zh">硬件开发</span><span class="lang-en hidden">Hardware Dev.</span>
+                        </span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">
+                            <span class="lang-zh">传感器技术</span><span class="lang-en hidden">Sensor Tech.</span>
+                        </span>
+                        <span class="px-3 py-1 bg-gray-50 text-gray-500 rounded-lg text-xs font-medium border border-gray-100">
+                            <span class="lang-zh">系统集成</span><span class="lang-en hidden">System Integration</span>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -168,5 +234,34 @@
         &copy; 2024-2026 Tingyu CHEN. Designed with Apple Principles.
     </footer>
 
+    <script>
+        const langToggleBtn = document.getElementById('lang-toggle');
+        const langZhElements = document.querySelectorAll('.lang-zh');
+        const langEnElements = document.querySelectorAll('.lang-en');
+        
+        let currentLang = localStorage.getItem('preferred-lang') || 'zh';
+
+        function applyLanguage(lang) {
+            if (lang === 'en') {
+                langZhElements.forEach(el => el.classList.add('hidden'));
+                langEnElements.forEach(el => el.classList.remove('hidden'));
+                langToggleBtn.innerText = '中';
+            } else {
+                langZhElements.forEach(el => el.classList.remove('hidden'));
+                langEnElements.forEach(el => el.classList.add('hidden'));
+                langToggleBtn.innerText = 'EN';
+            }
+            localStorage.setItem('preferred-lang', lang);
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+        }
+
+        langToggleBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            applyLanguage(currentLang);
+        });
+
+        // 页面加载时自动应用语言偏好
+        applyLanguage(currentLang);
+    </script>
 </body>
 </html>
