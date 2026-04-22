@@ -34,7 +34,7 @@
 </head>
 <body class="selection:bg-blue-100">
 
-<nav class="glass-nav fixed top-0 w-full z-50">
+    <nav class="glass-nav fixed top-0 w-full z-50">
         <div class="max-w-7xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
             
             <a href="index.html" class="text-xl font-bold tracking-tight hover:opacity-70 transition-opacity">Tingyu.</a>
@@ -43,14 +43,22 @@
                 
                 <div class="hidden lg:flex items-center gap-8 text-[13px] font-medium tracking-tight">
                     <a href="about.html" class="text-gray-500 hover:text-black transition-colors">About Me</a>
-                    <a href="projects.html" class="text-gray-500 hover:text-black transition-colors">项目</a>
-                    <a href="publications.html" class="text-gray-500 hover:text-black transition-colors">科研</a>
+                    <a href="projects.html" class="text-gray-500 hover:text-black transition-colors">
+                        <span class="lang-zh">项目</span><span class="lang-en hidden">Projects</span>
+                    </a>
+                    <a href="publications.html" class="text-gray-500 hover:text-black transition-colors">
+                        <span class="lang-zh">科研</span><span class="lang-en hidden">Research</span>
+                    </a>
                 </div>
 
                 <div class="hidden lg:block w-[1px] h-4 bg-gray-200"></div>
 
                 <div class="flex items-center gap-2.5 whitespace-nowrap">
                     
+                    <button id="lang-toggle" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 text-[11px] font-bold text-gray-600 transition-colors mr-1">
+                        EN
+                    </button>
+
                     <a href="cv.pdf" target="_blank" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gray-200 text-gray-600 hover:border-blue-500 hover:text-blue-600 text-[12px] font-semibold transition-all">
                         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                         <span class="hidden md:inline">Download CV</span>
@@ -58,7 +66,7 @@
                     </a>
                     
                     <a href="mailto:ctytingyu2001@outlook.com" class="px-4 py-1.5 rounded-full bg-[#0071E3] text-white hover:bg-[#0077ED] text-[12px] font-semibold transition-all shadow-sm">
-                        联系我
+                        <span class="lang-zh">联系我</span><span class="lang-en hidden">Contact</span>
                     </a>
 
                     <button id="menu-btn" class="lg:hidden p-1.5 text-gray-600 focus:outline-none ml-1">
@@ -73,39 +81,33 @@
         <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-xl border-b border-gray-100 overflow-hidden transition-all duration-300">
             <div class="flex flex-col items-center py-8 space-y-6">
                 <a href="about.html" class="text-2xl font-semibold text-gray-800">About Me</a>
-                <a href="projects.html" class="text-2xl font-semibold text-gray-800">Projects</a>
-                <a href="publications.html" class="text-2xl font-semibold text-gray-800">科研成果</a>
+                <a href="projects.html" class="text-2xl font-semibold text-gray-800">
+                    <span class="lang-zh">项目详情</span><span class="lang-en hidden">Projects</span>
+                </a>
+                <a href="publications.html" class="text-2xl font-semibold text-gray-800">
+                    <span class="lang-zh">科研成果</span><span class="lang-en hidden">Publications</span>
+                </a>
                 <div class="w-8 h-[1px] bg-gray-100 my-2"></div>
-                <a href="skills.html" class="text-gray-500">技术栈详情</a>
-                <a href="awards.html" class="text-gray-500">获奖记录</a>
+                <a href="skills.html" class="text-gray-500">
+                    <span class="lang-zh">技术栈详情</span><span class="lang-en hidden">Tech Stack</span>
+                </a>
+                <a href="awards.html" class="text-gray-500">
+                    <span class="lang-zh">获奖记录</span><span class="lang-en hidden">Awards</span>
+                </a>
             </div>
         </div>
     </nav>
-
-    <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            // 切换图标：如果是汉堡线就变 X，如果是 X 就变回汉堡线
-            if (mobileMenu.classList.contains('hidden')) {
-                menuIcon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
-            } else {
-                menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
-            }
-        });
-    </script>
 
     <main class="max-w-6xl mx-auto px-6 pt-32 pb-20">
         <section id="about" class="mb-20 text-center md:text-left">
             <h2 class="text-sm font-semibold tracking-widest uppercase text-blue-600 mb-4">Hello, I'm Tingyu Chen 陈廷誉</h2>
             <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-tight">
-                专注医疗机器人<br>& 控制理论研究
+                <span class="lang-zh">专注医疗机器人<br>& 控制理论研究</span>
+                <span class="lang-en hidden">Focusing on Medical Robotics<br>& Control Theory</span>
             </h1>
             <p class="text-xl text-gray-500 max-w-2xl leading-relaxed">
-                目前就读于米兰理工大学。探索强化学习与自适应控制的边界，重塑医疗机器人的智能未来。
+                <span class="lang-zh">目前就读于米兰理工大学。探索强化学习与自适应控制的边界，重塑医疗机器人的智能未来。</span>
+                <span class="lang-en hidden">MSc student at Politecnico di Milano. Exploring the frontiers of reinforcement learning and adaptive control to reshape the intelligent future of medical robotics.</span>
             </p>
         </section>
 
@@ -116,11 +118,20 @@
                     <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Education</h3>
                     <div class="mb-6">
                         <p class="font-bold text-xl">Politecnico di Milano</p>
-                        <p class="text-gray-500 text-sm">自动化与控制硕士 (医疗机器人方向)</p>
+                        <p class="text-gray-500 text-sm">
+                            <span class="lang-zh">自动化与控制硕士 (医疗机器人方向)</span>
+                            <span class="lang-en hidden">MSc in Automation and Control (Medical Robotics)</span>
+                        </p>
                     </div>
                     <div>
-                        <p class="font-bold text-xl text-gray-800">华南理工大学</p>
-                        <p class="text-gray-500 text-sm">机器人工程学士 · 专业排名前 15%</p>
+                        <p class="font-bold text-xl text-gray-800">
+                            <span class="lang-zh">华南理工大学</span>
+                            <span class="lang-en hidden">South China Univ. of Technology</span>
+                        </p>
+                        <p class="text-gray-500 text-sm">
+                            <span class="lang-zh">机器人工程学士 · 专业排名前 15%</span>
+                            <span class="lang-en hidden">BSc in Robotics Engineering · Top 15%</span>
+                        </p>
                     </div>
                 </div>
                 <div class="flex justify-end">
@@ -135,8 +146,14 @@
                     <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest">Latest Research</h3>
                     <svg class="w-5 h-5 text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </div>
-                <p class="text-2xl font-bold mb-4 group-hover:text-blue-600 transition-colors">基于堆叠机器学习的磁耦合器设计优化</p>
-                <p class="text-gray-500 mb-6 italic">已发表于 IEEE ISCAS 2024</p>
+                <p class="text-2xl font-bold mb-4 group-hover:text-blue-600 transition-colors">
+                    <span class="lang-zh">基于堆叠机器学习的磁耦合器设计优化</span>
+                    <span class="lang-en hidden">Design Optimization of Magnetic Couplers Based on Stacked Machine Learning</span>
+                </p>
+                <p class="text-gray-500 mb-6 italic">
+                    <span class="lang-zh">已发表于 IEEE ISCAS 2024</span>
+                    <span class="lang-en hidden">Published in IEEE ISCAS 2024</span>
+                </p>
                 <div class="flex flex-wrap gap-2">
                     <span class="px-3 py-1 bg-white rounded-full text-xs shadow-sm">Machine Learning</span>
                     <span class="px-3 py-1 bg-white rounded-full text-xs shadow-sm">WPT</span>
@@ -149,7 +166,10 @@
                     <svg class="w-4 h-4 text-gray-300 group-hover:text-blue-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </div>
                 <span class="text-4xl mb-4 group-hover:scale-110 transition-transform">🤖</span>
-                <p class="font-bold group-hover:text-blue-600 transition-colors">移动机器人<br>轨迹规划</p>
+                <p class="font-bold group-hover:text-blue-600 transition-colors">
+                    <span class="lang-zh">移动机器人<br>轨迹规划</span>
+                    <span class="lang-en hidden">Mobile Robot<br>Trajectory Planning</span>
+                </p>
                 <p class="text-[10px] text-gray-400 mt-2 uppercase tracking-widest">Selected Works</p>
             </a>
 
@@ -175,11 +195,17 @@
                 <ul class="space-y-4">
                     <li class="flex items-center space-x-3">
                         <span class="w-1.5 h-1.5 bg-blue-500 rounded-full group-hover:scale-125 transition-transform"></span>
-                        <span class="font-medium text-gray-700 text-sm group-hover:text-gray-900 transition-colors">美国大学生数学建模竞赛 (MCM) 一等奖</span>
+                        <span class="font-medium text-gray-700 text-sm group-hover:text-gray-900 transition-colors">
+                            <span class="lang-zh">美国大学生数学建模竞赛 (MCM) 一等奖</span>
+                            <span class="lang-en hidden">MCM Meritorious Winner (1st Prize)</span>
+                        </span>
                     </li>
                     <li class="flex items-center space-x-3">
                         <span class="w-1.5 h-1.5 bg-blue-500 rounded-full group-hover:scale-125 transition-transform"></span>
-                        <span class="font-medium text-gray-700 text-sm group-hover:text-gray-900 transition-colors">亚太地区数学建模竞赛 (APMCM) 二等奖</span>
+                        <span class="font-medium text-gray-700 text-sm group-hover:text-gray-900 transition-colors">
+                            <span class="lang-zh">亚太地区数学建模竞赛 (APMCM) 二等奖</span>
+                            <span class="lang-en hidden">APMCM Second Prize</span>
+                        </span>
                     </li>
                 </ul>
             </a>
@@ -190,23 +216,52 @@
         &copy; 2026 Tingyu CHEN. Designed with Apple Design Principles.
     </footer>
 
+    <script>
+        // 1. 移动端菜单控制
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
 
-<script>
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuIcon = document.getElementById('menu-icon');
+        menuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            if (isHidden) {
+                menuIcon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
+            } else {
+                menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            }
+        });
 
-    menuBtn.addEventListener('click', () => {
-        const isHidden = mobileMenu.classList.toggle('hidden');
-        // 切换汉堡图标和关闭图标
-        if (isHidden) {
-            menuIcon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
-        } else {
-            menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+        // 2. 无缝双语切换引擎
+        const langToggleBtn = document.getElementById('lang-toggle');
+        const langZhElements = document.querySelectorAll('.lang-zh');
+        const langEnElements = document.querySelectorAll('.lang-en');
+        
+        // 尝试从浏览器本地存储读取语言偏好，默认中文
+        let currentLang = localStorage.getItem('preferred-lang') || 'zh';
+
+        function applyLanguage(lang) {
+            if (lang === 'en') {
+                langZhElements.forEach(el => el.classList.add('hidden'));
+                langEnElements.forEach(el => el.classList.remove('hidden'));
+                langToggleBtn.innerText = '中';
+            } else {
+                langZhElements.forEach(el => el.classList.remove('hidden'));
+                langEnElements.forEach(el => el.classList.add('hidden'));
+                langToggleBtn.innerText = 'EN';
+            }
+            // 保存用户偏好
+            localStorage.setItem('preferred-lang', lang);
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
         }
-    });
-</script>
 
-    
+        // 绑定点击事件
+        langToggleBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            applyLanguage(currentLang);
+        });
+
+        // 初始化加载语言
+        applyLanguage(currentLang);
+    </script>
 </body>
 </html>
